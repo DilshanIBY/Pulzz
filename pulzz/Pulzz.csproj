@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29798AD8-30B0-4AE5-B5FF-9FA7FD4F7CFC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pulzz</RootNamespace>
+    <AssemblyName>pulzz</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\Desktop\Guna\Guna.UI-Framework-Lib-master\Guna.UI_WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Any\Any-Chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Any\Any-Chat.Designer.cs">
+      <DependentUpon>Any-Chat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Back-Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backend\Back-Attendance.Designer.cs">
+      <DependentUpon>Back-Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Back-Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backend\Back-Dashboard.Designer.cs">
+      <DependentUpon>Back-Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Back-Leaves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backend\Back-Leaves.Designer.cs">
+      <DependentUpon>Back-Leaves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Back-Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backend\Back-Menu.Designer.cs">
+      <DependentUpon>Back-Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Back-Payrolls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backend\Back-Payrolls.Designer.cs">
+      <DependentUpon>Back-Payrolls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Back-Profiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backend\Back-Profiles.Designer.cs">
+      <DependentUpon>Back-Profiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Back-Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backend\Back-Settings.Designer.cs">
+      <DependentUpon>Back-Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Back-Shifts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backend\Back-Shifts.Designer.cs">
+      <DependentUpon>Back-Shifts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Leaves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\Leaves.Designer.cs">
+      <DependentUpon>Leaves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Payrolls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\Payrolls.Designer.cs">
+      <DependentUpon>Payrolls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login-Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login-Register.Designer.cs">
+      <DependentUpon>Login-Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loading-Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading-Screen.Designer.cs">
+      <DependentUpon>Loading-Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Shifts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\Shifts.Designer.cs">
+      <DependentUpon>Shifts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Any\Any-Chat.resx">
+      <DependentUpon>Any-Chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Back-Attendance.resx">
+      <DependentUpon>Back-Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Back-Dashboard.resx">
+      <DependentUpon>Back-Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Back-Leaves.resx">
+      <DependentUpon>Back-Leaves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Back-Menu.resx">
+      <DependentUpon>Back-Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Back-Payrolls.resx">
+      <DependentUpon>Back-Payrolls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Back-Profiles.resx">
+      <DependentUpon>Back-Profiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Back-Settings.resx">
+      <DependentUpon>Back-Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Back-Shifts.resx">
+      <DependentUpon>Back-Shifts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Leaves.resx">
+      <DependentUpon>Leaves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Payrolls.resx">
+      <DependentUpon>Payrolls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login-Register.resx">
+      <DependentUpon>Login-Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading-Screen.resx">
+      <DependentUpon>Loading-Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Shifts.resx">
+      <DependentUpon>Shifts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payroll.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salary %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salary %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data-monitoring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attendant-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leave %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staff-management.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compensation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
