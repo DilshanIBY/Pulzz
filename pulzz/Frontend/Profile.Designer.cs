@@ -443,9 +443,9 @@
             this.label5.Location = new System.Drawing.Point(72, 420);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 19);
+            this.label5.Size = new System.Drawing.Size(98, 19);
             this.label5.TabIndex = 39;
-            this.label5.Text = "Address";
+            this.label5.Text = "Addresses";
             // 
             // label2
             // 
@@ -456,9 +456,9 @@
             this.label2.Location = new System.Drawing.Point(218, 355);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 19);
+            this.label2.Size = new System.Drawing.Size(103, 19);
             this.label2.TabIndex = 36;
-            this.label2.Text = "Employee";
+            this.label2.Text = "Employees";
             // 
             // label1
             // 
