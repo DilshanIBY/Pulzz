@@ -16,5 +16,15 @@ namespace pulzz.Frontend
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //xyz
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //xyz
+        }
     }
 }
