@@ -77,7 +77,7 @@ namespace pulzz
         {
             label_val.Text = "Attends";
             guna2PictureBox_val.Image = Properties.Resources.attendance1;
-            container(new Attendance());
+            container(new frmCheckAttendence());
         }
 
         private void guna2Button12_Click(object sender, EventArgs e)

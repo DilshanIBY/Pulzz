@@ -5,42 +5,50 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace pulzz.Backend
 {
-    public partial class Back_Attendance : Form
+    public partial class AdninForm : Form
     {
-        public Back_Attendance()
+
+        SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\USER\\source\\repos\\Pulzz\\pulzz\\Pulzz_Database.mdf;Integrated Security=True");
+
+        SqlCommand cm = new SqlCommand();
+        public AdninForm()
         {
             InitializeComponent();
+            LoadRecord1();
         }
 
-        private void Back_Attendance_Load(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Are You Sure You Want to Close This Application?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
-
+            label4.Text = DateTime.Now.ToLongTimeString();
+            txt3.Text = DateTime.Now.ToLongTimeString();
+            txt4.Text = DateTime.Now.ToLongTimeString();
         }
 
-        private void txt1_SelectedIndexChanged(object sender, EventArgs e)
+        private void LoadRecord1()
         {
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM tblAttendence WHERE EmpID = @EmpID ORDER BY Number DESC", conn);
-                cmd.Parameters.AddWithValue("@EmpID", txt1.SelectedItem.ToString());
+                SqlCommand cmd = new SqlCommand("SELECT DISTINCT EmpID FROM tblAttendence", conn);
                 SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
+                while (dr.Read())
                 {
-                    // Display details of the latest record
-                    txt1.Text = dr["EmpID"].ToString();
-                    dateTimePicker1.Value = Convert.ToDateTime(dr["ClockIn"]);
+                    txt1.Items.Add(dr["EmpID"].ToString());
                 }
             }
             catch (Exception ex)
@@ -50,7 +58,6 @@ namespace pulzz.Backend
             finally
             {
                 conn.Close();
-                dateTimePicker1.Show();
             }
         }
 
@@ -101,6 +108,86 @@ namespace pulzz.Backend
                 txt1.Text = "";
                 Application.Restart();
             }
+
+        }
+
+        private int GetNextNumber()
+        {
+            int nextNumber = 1;
+            try
+            {
+                conn.Open();
+                SqlCommand getMaxNumberCmd = new SqlCommand("SELECT ISNULL(MAX(Number), 0) FROM tblAttendence", conn);
+                object result = getMaxNumberCmd.ExecuteScalar();
+                if (result != DBNull.Value)
+                {
+                    nextNumber = Convert.ToInt32(result) + 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getting next number: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return nextNumber;
+        }
+
+        private string GenerateId(string empId, string date, string currentTime)
+        {
+            string concatenatedString = empId + date + currentTime;
+            byte[] bytes = Encoding.UTF8.GetBytes(concatenatedString);
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] hashBytes = sha256.ComputeHash(bytes);
+                string hashString = BitConverter.ToString(hashBytes).Replace("-", "").Substring(0, 10);
+                return hashString;
+            }
+        }
+
+        private void txt1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM tblAttendence WHERE EmpID = @EmpID ORDER BY Number DESC", conn);
+                cmd.Parameters.AddWithValue("@EmpID", txt1.SelectedItem.ToString());
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    // Display details of the latest record
+                    txt1.Text = dr["EmpID"].ToString();
+                    dateTimePicker1.Value = Convert.ToDateTime(dr["ClockIn"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+                dateTimePicker1.Show();
+            }
+        }
+
+        private void AdninForm_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+
+            label4.Text = DateTime.Now.ToLongTimeString();
+            txt3.Text = DateTime.Now.ToLongTimeString();
+            label5.Text = DateTime.Now.ToLongDateString();
+            txt4.Text = DateTime.Now.ToLongTimeString();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Application.Restart();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -133,12 +220,64 @@ namespace pulzz.Backend
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are You Sure You Want to Close This Application?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt4_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt2_ValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

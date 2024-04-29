@@ -45,7 +45,7 @@ namespace pulzz.Backend
         {
             label_val.Text = "Attendance Management";
             guna2PictureBox_val.Image = Properties.Resources.attendance2;
-            container(new Back_Attendance());
+            container(new AdninForm());
         }
 
         private void guna2Button13_Click(object sender, EventArgs e)

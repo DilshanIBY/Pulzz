@@ -1,6 +1,6 @@
 ﻿namespace pulzz
 {
-    partial class Attendance
+    partial class frmCheckAttendence
     {
         /// <summary>
         /// Required designer variable.
@@ -65,7 +65,6 @@
             this.button3.Text = "Employee Absent Days";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -82,7 +81,6 @@
             this.button2.Text = "Employee Present Days";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -98,7 +96,7 @@
             this.button1.TabIndex = 159;
             this.button1.Text = "Find";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txt1
             // 
@@ -124,11 +122,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(469, 90);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(359, 104);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(341, 41);
+            this.label4.Size = new System.Drawing.Size(312, 31);
             this.label4.TabIndex = 156;
             this.label4.Text = "Attendence Dashboard";
             // 
@@ -146,9 +144,8 @@
             this.button4.TabIndex = 155;
             this.button4.Text = "Close";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Attendance
+            // frmCheckAttendence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -163,8 +160,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Attendance";
+            this.Name = "frmCheckAttendence";
             this.Text = "Frontend_ATTENDS";
+            this.Load += new System.EventHandler(this.frmCheckAttendence_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
