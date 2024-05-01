@@ -149,7 +149,79 @@ namespace pulzz
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            button2.Show();
+            button3.Show();
+        }
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+                {
+                    // Open the connection
+                    connection.Open();
+
+                    // SQL command to count distinct EmpId values
+                    string sql = "SELECT COUNT(DISTINCT EmpID) AS EmpCount FROM tblAttendence where Status='1'";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        // Execute the command and get the result
+                        object result = command.ExecuteScalar();
+
+                        // Display the result in a label or any other control
+                        if (result != null)
+                        {
+                            label1.Text = "Present Days in this Month : " + result.ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            label1.Show();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+                {
+                    // Open the connection
+                    connection.Open();
+
+                    // SQL command to count distinct EmpId values
+                    string sql = "SELECT COUNT(DISTINCT EmpID) AS EmpCount FROM tblAttendence where status = '0'";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        // Execute the command and get the result
+                        object result = command.ExecuteScalar();
+
+                        // Display the result in a label or any other control
+                        if (result != null)
+                        {
+                            label1.Text = "Absent Days in this Month : " + result.ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            label1.Show();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

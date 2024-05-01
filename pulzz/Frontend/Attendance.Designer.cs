@@ -65,6 +65,7 @@
             this.button3.Text = "Employee Absent Days";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button2
             // 
@@ -81,6 +82,7 @@
             this.button2.Text = "Employee Present Days";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -144,6 +146,7 @@
             this.button4.TabIndex = 155;
             this.button4.Text = "Close";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // frmCheckAttendence
             // 
