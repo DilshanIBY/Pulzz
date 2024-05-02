@@ -64,6 +64,7 @@
             this.LAcancelBtn.Size = new System.Drawing.Size(141, 45);
             this.LAcancelBtn.TabIndex = 53;
             this.LAcancelBtn.Text = "Cancel";
+            this.LAcancelBtn.Click += new System.EventHandler(this.LAcancelBtn_Click);
             // 
             // LAclearBtn
             // 
@@ -80,6 +81,7 @@
             this.LAclearBtn.Size = new System.Drawing.Size(141, 45);
             this.LAclearBtn.TabIndex = 52;
             this.LAclearBtn.Text = "Clear";
+            this.LAclearBtn.Click += new System.EventHandler(this.LAclearBtn_Click);
             // 
             // LAStatus
             // 
@@ -115,6 +117,7 @@
             this.LAsaveBtn.Size = new System.Drawing.Size(141, 45);
             this.LAsaveBtn.TabIndex = 50;
             this.LAsaveBtn.Text = "Save";
+            this.LAsaveBtn.Click += new System.EventHandler(this.LAsaveBtn_Click);
             // 
             // LAend
             // 
@@ -193,6 +196,7 @@
             this.LAenterBtn.Size = new System.Drawing.Size(141, 45);
             this.LAenterBtn.TabIndex = 44;
             this.LAenterBtn.Text = "Enter";
+            this.LAenterBtn.Click += new System.EventHandler(this.LAenterBtn_Click);
             // 
             // label5
             // 
