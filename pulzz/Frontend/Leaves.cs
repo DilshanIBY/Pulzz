@@ -34,7 +34,7 @@ namespace pulzz.Frontend
             string end = Lend.Text;
 
             // creating sql query
-            string query = $"INSERT INTO leavesTbl VALUES ('{id}','{empid}','{empname}','{type}','{start}','{end}');";
+            string query = $"INSERT INTO leavetable VALUES ('{id}','{empid}','{empname}','{type}','{start}','{end}');";
 
 
             // creating sql command
@@ -76,7 +76,7 @@ namespace pulzz.Frontend
            string id = LformId.Text;
 
             // creating sql query
-           string query = $"SELECT * FORM leavesTbl WHERE Id = '{id}'";
+           string query = $"SELECT * FORM leavetable WHERE Id = '{id}'";
 
             // creating sql command
            SqlCommand cmd = new SqlCommand(query, conn);
@@ -111,6 +111,44 @@ namespace pulzz.Frontend
         private void LformId_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void enterBtn_Click(object sender, EventArgs e)
+        {
+            // declaring variables to store data
+            string id = LformId.Text;
+
+            // creating sql query
+            string query = $"SELECT * FORM leavesTbl WHERE Id = '{id}'";
+
+            // creating sql command
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            // executing the sql command 
+            try
+            {
+                conn.Open();
+
+                SqlDataReader data = cmd.ExecuteReader();
+
+                if (data.HasRows)
+                {
+                    data.Read();
+                    LempId.Text = data["EmpId"].ToString();
+                    LempName.Text = data["EmpName"].ToString();
+                    Ltype.Text = data["Type"].ToString();
+                    Lstart.Value = Convert.ToDateTime(data["Start"]);
+                    Lend.Value = Convert.ToDateTime(data["End"]);
+                    LStatus.Text = data["Status"].ToString();
+                }
+                conn.Close();
+
+                MessageBox.Show("Approval this leave", "APPROVAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 

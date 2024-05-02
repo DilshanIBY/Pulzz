@@ -27,7 +27,7 @@ namespace pulzz.Backend
             string id = LAId.Text;
 
             // creating sql query
-            string query = $"SELECT * FORM leavesTbl WHERE Id = '{id}'";
+            string query = $"SELECT * FORM leavetable WHERE Id = '{id}'";
 
             // creating sql command
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -65,7 +65,7 @@ namespace pulzz.Backend
             string status = LAStatus.Text;
 
             // creating sql query
-            string query = $"INSERT INTO leavesTbl VALUES ('{status}');";
+            string query = $"INSERT INTO leavetable VALUES ('{status}');";
 
 
             // creating sql command
@@ -105,3 +105,4 @@ namespace pulzz.Backend
     
     
 }
+

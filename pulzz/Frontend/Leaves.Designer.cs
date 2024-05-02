@@ -47,6 +47,7 @@
             this.LenterBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.LStatus = new Guna.UI2.WinForms.Guna2TextBox();
+            this.enterBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // LempName
@@ -120,7 +121,7 @@
             this.LcancelBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.LcancelBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.LcancelBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LcancelBtn.FillColor = System.Drawing.Color.Navy;
+            this.LcancelBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.LcancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LcancelBtn.ForeColor = System.Drawing.Color.White;
             this.LcancelBtn.Location = new System.Drawing.Point(803, 523);
@@ -137,7 +138,7 @@
             this.LclearBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.LclearBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.LclearBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LclearBtn.FillColor = System.Drawing.Color.Navy;
+            this.LclearBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.LclearBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LclearBtn.ForeColor = System.Drawing.Color.White;
             this.LclearBtn.Location = new System.Drawing.Point(519, 523);
@@ -154,8 +155,8 @@
             this.LapplyBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.LapplyBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.LapplyBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LapplyBtn.FillColor = System.Drawing.Color.Navy;
-            this.LapplyBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LapplyBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.LapplyBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LapplyBtn.ForeColor = System.Drawing.Color.White;
             this.LapplyBtn.Location = new System.Drawing.Point(260, 523);
             this.LapplyBtn.Name = "LapplyBtn";
@@ -168,8 +169,8 @@
             // 
             this.Lend.BorderRadius = 10;
             this.Lend.Checked = true;
-            this.Lend.FillColor = System.Drawing.Color.Navy;
-            this.Lend.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lend.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Lend.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.Lend.ForeColor = System.Drawing.Color.White;
             this.Lend.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Lend.Location = new System.Drawing.Point(402, 386);
@@ -184,8 +185,8 @@
             // 
             this.Lstart.BorderRadius = 10;
             this.Lstart.Checked = true;
-            this.Lstart.FillColor = System.Drawing.Color.Navy;
-            this.Lstart.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lstart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Lstart.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.Lstart.ForeColor = System.Drawing.Color.White;
             this.Lstart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Lstart.Location = new System.Drawing.Point(918, 307);
@@ -297,8 +298,8 @@
             this.LenterBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.LenterBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.LenterBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LenterBtn.FillColor = System.Drawing.Color.Navy;
-            this.LenterBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LenterBtn.FillColor = System.Drawing.Color.Empty;
+            this.LenterBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LenterBtn.ForeColor = System.Drawing.Color.White;
             this.LenterBtn.Location = new System.Drawing.Point(823, 123);
             this.LenterBtn.Name = "LenterBtn";
@@ -338,12 +339,30 @@
             this.LStatus.Size = new System.Drawing.Size(229, 48);
             this.LStatus.TabIndex = 38;
             // 
+            // enterBtn
+            // 
+            this.enterBtn.BorderRadius = 10;
+            this.enterBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.enterBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.enterBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.enterBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.enterBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.enterBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.enterBtn.ForeColor = System.Drawing.Color.White;
+            this.enterBtn.Location = new System.Drawing.Point(763, 126);
+            this.enterBtn.Name = "enterBtn";
+            this.enterBtn.Size = new System.Drawing.Size(141, 45);
+            this.enterBtn.TabIndex = 39;
+            this.enterBtn.Text = "Enter";
+            this.enterBtn.Click += new System.EventHandler(this.enterBtn_Click);
+            // 
             // Leaves
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1294, 722);
+            this.Controls.Add(this.enterBtn);
             this.Controls.Add(this.LStatus);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LenterBtn);
@@ -392,5 +411,6 @@
         private Guna.UI2.WinForms.Guna2Button LenterBtn;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox LStatus;
+        private Guna.UI2.WinForms.Guna2Button enterBtn;
     }
 }
