@@ -101,7 +101,7 @@
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Empty;
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.Image = global::pulzz.Properties.Resources.user;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(25, 9);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(0);
@@ -196,9 +196,9 @@
             this.label1.Location = new System.Drawing.Point(21, 61);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 24);
+            this.label1.Size = new System.Drawing.Size(166, 24);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Dr A Mohammed";
+            this.label1.Text = "Dr Zandya Brown";
             // 
             // guna2Button11
             // 

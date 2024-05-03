@@ -41,7 +41,7 @@ namespace WindowsFormsApp9
                 ChatMessage.FromUser("If user is asking something that need to do a ADD, UPDATE or DELETE operation to the database, make sure to format your response as this-> ['THE SQL QUERY TO PERFORM THE ACTION','YOUR MESSAGE TO THE USER ASSUMING THAT THE OPERATION IS COMPLETE']"),
                 ChatMessage.FromUser("Never output sql queries to SELECT type operations. Do the search by your own from below database"),
                 ChatMessage.FromUser($"The whole database: {new DatabaseReader().readDatabase()}"),
-                ChatMessage.FromUser($"This user's EmployeeId:1 FirstName:John"),
+                ChatMessage.FromUser($"This user's EmployeeId:1 FirstName:Zandya"),
                 ChatMessage.FromUser($"Last message from you to this user LastMsg:{new DatabaseReader().lastMsg(1)} Make sure to act based on this history."),
                 ChatMessage.FromUser(message)
                 });
