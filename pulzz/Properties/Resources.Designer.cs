@@ -83,6 +83,16 @@ namespace pulzz.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bot {
+            get {
+                object obj = ResourceManager.GetObject("bot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chat__1_ {
             get {
                 object obj = ResourceManager.GetObject("chat__1_", resourceCulture);
@@ -206,6 +216,16 @@ namespace pulzz.Properties {
         internal static System.Drawing.Bitmap staff2 {
             get {
                 object obj = ResourceManager.GetObject("staff2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
