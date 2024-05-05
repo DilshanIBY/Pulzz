@@ -43,7 +43,8 @@
             this.guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pulzzLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pulzzLogoDark = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel_container = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel_top = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -60,7 +61,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pulzzLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pulzzLogoDark)).BeginInit();
             this.guna2Panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox_val)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +72,8 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel1.Controls.Add(this.pulzzLogo);
+            this.guna2Panel1.Controls.Add(this.pulzzLogoDark);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -343,18 +346,34 @@
             this.guna2Button10.UseTransparentBackground = true;
             this.guna2Button10.Click += new System.EventHandler(this.guna2Button10_Click);
             // 
-            // guna2PictureBox1
+            // pulzzLogo
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(1, 11);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(119, 43);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
+            this.pulzzLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pulzzLogo.FillColor = System.Drawing.Color.Transparent;
+            this.pulzzLogo.Image = ((System.Drawing.Image)(resources.GetObject("pulzzLogo.Image")));
+            this.pulzzLogo.ImageRotate = 0F;
+            this.pulzzLogo.Location = new System.Drawing.Point(1, 11);
+            this.pulzzLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pulzzLogo.Name = "pulzzLogo";
+            this.pulzzLogo.Size = new System.Drawing.Size(119, 43);
+            this.pulzzLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pulzzLogo.TabIndex = 0;
+            this.pulzzLogo.TabStop = false;
+            // 
+            // pulzzLogoDark
+            // 
+            this.pulzzLogoDark.BackColor = System.Drawing.Color.Transparent;
+            this.pulzzLogoDark.FillColor = System.Drawing.Color.Transparent;
+            this.pulzzLogoDark.Image = ((System.Drawing.Image)(resources.GetObject("pulzzLogoDark.Image")));
+            this.pulzzLogoDark.ImageRotate = 0F;
+            this.pulzzLogoDark.Location = new System.Drawing.Point(1, 11);
+            this.pulzzLogoDark.Margin = new System.Windows.Forms.Padding(4);
+            this.pulzzLogoDark.Name = "pulzzLogoDark";
+            this.pulzzLogoDark.Size = new System.Drawing.Size(119, 43);
+            this.pulzzLogoDark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pulzzLogoDark.TabIndex = 20;
+            this.pulzzLogoDark.TabStop = false;
+            this.pulzzLogoDark.Visible = false;
             // 
             // guna2Panel_container
             // 
@@ -546,7 +565,8 @@
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pulzzLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pulzzLogoDark)).EndInit();
             this.guna2Panel_top.ResumeLayout(false);
             this.guna2Panel_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox_val)).EndInit();
@@ -565,7 +585,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button14;
         private Guna.UI2.WinForms.Guna2Button guna2Button12;
         private Guna.UI2.WinForms.Guna2Button guna2Button10;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox pulzzLogo;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_container;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_top;
@@ -582,5 +602,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2PictureBox pulzzLogoDark;
     }
 }
