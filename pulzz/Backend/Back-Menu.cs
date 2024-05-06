@@ -10,16 +10,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Configuration;
 using System.Windows.Forms;
-using WindowsFormsApp9;
+using Pulzz;
 
 namespace pulzz.Backend
 {
     public partial class Back_Menu : Form
     {
-        private Front_Any _load;
+        private Any _load;
         public Back_Menu()
         {
             InitializeComponent();
+            initializeDarkMode();
+        }
+
+        private void Back_Menu_Load(object sender, EventArgs e)
+        {
+            // guna2ShadowForm1.SetShadowForm(this);
+            label_val.Text = "Analytics";
+            guna2PictureBox_val.Image = Properties.Resources.home2;
+            container(new Back_Dashboard());
+            UpdateContainerUI();
         }
 
         private void container(object _form)
@@ -43,7 +53,7 @@ namespace pulzz.Backend
             label_val.Text = "Analytics";
             guna2PictureBox_val.Image = Properties.Resources.home2;
             container(new Back_Dashboard());
-            UpdateContainerUI("UIMode");
+            UpdateContainerUI();
         }
 
         private void guna2Button8_Click(object sender, EventArgs e)
@@ -51,7 +61,7 @@ namespace pulzz.Backend
             label_val.Text = "Attendance Management";
             guna2PictureBox_val.Image = Properties.Resources.attendance2;
             container(new Back_Attendance());
-            UpdateContainerUI("UIMode");
+            UpdateContainerUI();
         }
 
         private void guna2Button13_Click(object sender, EventArgs e)
@@ -59,7 +69,7 @@ namespace pulzz.Backend
             label_val.Text = "Shift Management";
             guna2PictureBox_val.Image = Properties.Resources.shift2;
             container(new Back_Shifts());
-            UpdateContainerUI("UIMode");
+            UpdateContainerUI();
         }
 
         private void guna2Button14_Click(object sender, EventArgs e)
@@ -67,7 +77,7 @@ namespace pulzz.Backend
             label_val.Text = "Leave Management";
             guna2PictureBox_val.Image = Properties.Resources.leave2;
             container(new Back_Leaves());
-            UpdateContainerUI("UIMode");
+            UpdateContainerUI();
         }
 
         private void guna2Button12_Click(object sender, EventArgs e)
@@ -75,7 +85,7 @@ namespace pulzz.Backend
             label_val.Text = "Payroll Management";
             guna2PictureBox_val.Image = Properties.Resources.payroll2;
             container(new Back_Payrolls());
-            UpdateContainerUI("UIMode");
+            UpdateContainerUI();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -83,7 +93,7 @@ namespace pulzz.Backend
             label_val.Text = "Profiles";
             guna2PictureBox_val.Image = Properties.Resources.staff2;
             container(new Back_Profiles());
-            UpdateContainerUI("UIMode");
+            UpdateContainerUI();
         }
 
         private void guna2Button10_Click(object sender, EventArgs e)
@@ -91,21 +101,14 @@ namespace pulzz.Backend
             label_val.Text = "Settings";
             guna2PictureBox_val.Image = Properties.Resources.settings2;
             container(new Back_Settings());
-            UpdateContainerUI("UIMode");
-        }
-
-        private void Back_Menu_Load(object sender, EventArgs e)
-        {
-            // guna2ShadowForm1.SetShadowForm(this);
-            label_val.Text = "Analytics";
-            guna2PictureBox_val.Image = Properties.Resources.home2;
-            container(new Back_Dashboard());
+            UpdateContainerUI();
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            _load = new Front_Any();
+            _load = new Any();
             _load.anyBackendUI();
+            _load.AnyDarkMode();
             _load.Show();
         }
 
@@ -118,85 +121,12 @@ namespace pulzz.Backend
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            ChangeUIMode("UIMode");
-        }
-
-        private void ChangeUIMode(string key)
-        {
-            try
-            {
-                string uiMode = WebConfigurationManager.AppSettings[key];
-                if (uiMode == "light")
-                {
-                    guna2Panel_top.ForeColor = Color.White;
-                    guna2Panel_top.BackColor = Color.FromArgb(5, 5, 5);
-                    guna2Panel1.ForeColor = Color.White;
-                    guna2TextBox1.FillColor = Color.FromArgb(5, 5, 5);
-                    guna2Panel1.ForeColor = Color.White;
-                    guna2Panel1.FillColor = Color.FromArgb(5, 5, 5);
-                    guna2Button1.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
-                    guna2Button8.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
-                    guna2Button10.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
-                    guna2Button11.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
-                    guna2Button12.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
-                    guna2Button13.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
-                    guna2Button14.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
-                    foreach (Control ctrl in guna2Panel_container.Controls)
-                    {
-                        ctrl.ForeColor = Color.White;
-                        ctrl.BackColor = Color.FromArgb(5, 5, 5);
-                    }
-                    ChangeControlColors(guna2Panel_container.Controls, Color.White, Color.FromArgb(5, 5, 5));
-                    WebConfigurationManager.AppSettings[key] = "dark";
-                }
-                else
-                {
-                    guna2Panel_top.ForeColor = Color.FromArgb(5, 5, 5);
-                    guna2Panel_top.BackColor = Color.White;
-                    guna2Panel1.ForeColor = Color.FromArgb(5, 5, 5);
-                    guna2TextBox1.FillColor = Color.White;
-                    guna2Panel1.ForeColor = Color.FromArgb(5, 5, 5);
-                    guna2Panel1.FillColor = Color.White;
-                    guna2Button1.CheckedState.FillColor = Color.White;
-                    guna2Button8.CheckedState.FillColor = Color.White;
-                    guna2Button10.CheckedState.FillColor = Color.White;
-                    guna2Button11.CheckedState.FillColor = Color.White;
-                    guna2Button12.CheckedState.FillColor = Color.White;
-                    guna2Button13.CheckedState.FillColor = Color.White;
-                    guna2Button14.CheckedState.FillColor = Color.White;
-                    foreach (System.Windows.Forms.Control ctrl in guna2Panel_container.Controls)
-                    {
-                        ctrl.ForeColor = Color.FromArgb(5, 5, 5);
-                        ctrl.BackColor = Color.White;
-                    }
-                    ChangeControlColors(guna2Panel_container.Controls, Color.FromArgb(5, 5, 5), Color.White);
-                    WebConfigurationManager.AppSettings[key] = "light";
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-        }
-
-        private void ChangeControlColors(Control.ControlCollection controls, Color fromColor, Color toColor)
-        {
-            foreach (Control control in controls)
-            {
-                if (control.ForeColor == fromColor)
-                    control.ForeColor = toColor;
-
-                if (control.BackColor == fromColor)
-                    control.BackColor = toColor;
-
-                if (control.HasChildren)
-                    ChangeControlColors(control.Controls, fromColor, toColor);
-            }
+            ChangeUIMode();
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-            Front_Any any = Application.OpenForms["Front_Any"] as Front_Any;
+            Any any = Application.OpenForms["Any"] as Any;
 
             if (any != null)
             {
@@ -206,25 +136,11 @@ namespace pulzz.Backend
 
         private void guna2ControlBox3_Click(object sender, EventArgs e)
         {
-            Front_Any any = Application.OpenForms["Front_Any"] as Front_Any;
+            Any any = Application.OpenForms["Any"] as Any;
 
             if (any != null)
             {
                 any.Hide();
-            }
-        }
-
-        public void UpdateContainerUI(string key)
-        {
-            string uiMode = WebConfigurationManager.AppSettings[key];
-            if (uiMode == "dark")
-            {
-                foreach (Control ctrl in guna2Panel_container.Controls)
-                {
-                    ctrl.ForeColor = Color.White;
-                    ctrl.BackColor = Color.FromArgb(5, 5, 5);
-                }
-                ChangeControlColors(guna2Panel_container.Controls, Color.White, Color.FromArgb(5, 5, 5));
             }
         }
 
@@ -251,7 +167,7 @@ namespace pulzz.Backend
                     label_val.Text = "Analytics";
                     guna2PictureBox_val.Image = Properties.Resources.home2;
                     container(new Back_Dashboard());
-                    UpdateContainerUI("UIMode");
+                    UpdateContainerUI();
                     guna2Button11.Checked = true;
                 }
                 else if (search.Contains("Shift") || search.Contains("Shifts") || search.Contains("shift") || search.Contains("shifts"))
@@ -259,7 +175,7 @@ namespace pulzz.Backend
                     label_val.Text = "Shift Management";
                     guna2PictureBox_val.Image = Properties.Resources.shift2;
                     container(new Back_Shifts());
-                    UpdateContainerUI("UIMode");
+                    UpdateContainerUI();
                     guna2Button13.Checked = true;
 
                 }
@@ -268,7 +184,7 @@ namespace pulzz.Backend
                     label_val.Text = "Leave Management";
                     guna2PictureBox_val.Image = Properties.Resources.leave2;
                     container(new Back_Leaves());
-                    UpdateContainerUI("UIMode");
+                    UpdateContainerUI();
                     guna2Button14.Checked = true;
 
                 }
@@ -277,7 +193,7 @@ namespace pulzz.Backend
                     label_val.Text = "Attendance Management";
                     guna2PictureBox_val.Image = Properties.Resources.attendance2;
                     container(new Back_Attendance());
-                    UpdateContainerUI("UIMode");
+                    UpdateContainerUI();
                     guna2Button8.Checked = true;
 
                 }
@@ -286,7 +202,7 @@ namespace pulzz.Backend
                     label_val.Text = "Payroll Management";
                     guna2PictureBox_val.Image = Properties.Resources.payroll2;
                     container(new Back_Payrolls());
-                    UpdateContainerUI("UIMode");
+                    UpdateContainerUI();
                     guna2Button12.Checked = true;
 
                 }
@@ -295,7 +211,7 @@ namespace pulzz.Backend
                     label_val.Text = "Profiles";
                     guna2PictureBox_val.Image = Properties.Resources.staff2;
                     container(new Back_Profiles());
-                    UpdateContainerUI("UIMode");
+                    UpdateContainerUI();
                     guna2Button1.Checked = true;
 
                 }
@@ -304,11 +220,126 @@ namespace pulzz.Backend
                     label_val.Text = "Settings";
                     guna2PictureBox_val.Image = Properties.Resources.settings2;
                     container(new Back_Settings());
-                    UpdateContainerUI("UIMode");
+                    UpdateContainerUI();
                     guna2Button10.Checked = true;
 
                 }
             }
         }
+
+        private void ChangeUIMode()
+        {
+            try
+            {
+                string uiMode = WebConfigurationManager.AppSettings["UIMode"];
+                if (uiMode == "light")
+                {
+                    pulzzLogo.Visible = false;
+                    pulzzLogoDark.Visible = true;
+                    guna2Panel_top.ForeColor = Color.White;
+                    guna2Panel_top.BackColor = Color.FromArgb(5, 5, 5);
+                    guna2Panel1.ForeColor = Color.White;
+                    guna2TextBox1.FillColor = Color.FromArgb(5, 5, 5);
+                    guna2Panel1.ForeColor = Color.White;
+                    guna2Panel1.FillColor = Color.FromArgb(5, 5, 5);
+                    guna2Button1.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+                    guna2Button8.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+                    guna2Button10.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+                    guna2Button11.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+                    guna2Button12.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+                    guna2Button13.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+                    guna2Button14.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+                    foreach (Control ctrl in guna2Panel_container.Controls)
+                    {
+                        ctrl.ForeColor = Color.White;
+                        ctrl.BackColor = Color.FromArgb(5, 5, 5);
+                    }
+                    ChangeControlColors(guna2Panel_container.Controls, Color.White, Color.FromArgb(5, 5, 5));
+                    WebConfigurationManager.AppSettings["UIMode"] = "dark";
+                }
+                else
+                {
+                    pulzzLogoDark.Visible = false;
+                    pulzzLogo.Visible = true;
+                    guna2Panel_top.ForeColor = Color.FromArgb(5, 5, 5);
+                    guna2Panel_top.BackColor = Color.White;
+                    guna2Panel1.ForeColor = Color.FromArgb(5, 5, 5);
+                    guna2TextBox1.FillColor = Color.White;
+                    guna2Panel1.ForeColor = Color.FromArgb(5, 5, 5);
+                    guna2Panel1.FillColor = Color.White;
+                    guna2Button1.CheckedState.FillColor = Color.White;
+                    guna2Button8.CheckedState.FillColor = Color.White;
+                    guna2Button10.CheckedState.FillColor = Color.White;
+                    guna2Button11.CheckedState.FillColor = Color.White;
+                    guna2Button12.CheckedState.FillColor = Color.White;
+                    guna2Button13.CheckedState.FillColor = Color.White;
+                    guna2Button14.CheckedState.FillColor = Color.White;
+                    foreach (System.Windows.Forms.Control ctrl in guna2Panel_container.Controls)
+                    {
+                        ctrl.ForeColor = Color.FromArgb(5, 5, 5);
+                        ctrl.BackColor = Color.White;
+                    }
+                    ChangeControlColors(guna2Panel_container.Controls, Color.FromArgb(5, 5, 5), Color.White);
+                    WebConfigurationManager.AppSettings["UIMode"] = "light";
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        void initializeDarkMode()
+        {
+            string uiMode = WebConfigurationManager.AppSettings["UIMode"];
+            if (uiMode == "dark")
+            {
+                pulzzLogo.Visible = false;
+                pulzzLogoDark.Visible = true;
+                guna2Panel_top.ForeColor = Color.White;
+                guna2Panel_top.BackColor = Color.FromArgb(5, 5, 5);
+                guna2Panel1.ForeColor = Color.White;
+                guna2TextBox1.FillColor = Color.FromArgb(5, 5, 5);
+                guna2Panel1.ForeColor = Color.White;
+                guna2Panel1.FillColor = Color.FromArgb(5, 5, 5);
+                guna2Button1.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+                guna2Button8.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+                guna2Button10.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+                guna2Button11.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+                guna2Button12.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+                guna2Button13.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+                guna2Button14.CheckedState.FillColor = Color.FromArgb(5, 5, 5);
+            }
+        }
+        public void UpdateContainerUI()
+        {
+            string uiMode = WebConfigurationManager.AppSettings["UIMode"];
+            if (uiMode == "dark")
+            {
+                foreach (Control ctrl in guna2Panel_container.Controls)
+                {
+                    ctrl.ForeColor = Color.White;
+                    ctrl.BackColor = Color.FromArgb(5, 5, 5);
+                }
+                ChangeControlColors(guna2Panel_container.Controls, Color.White, Color.FromArgb(5, 5, 5));
+            }
+        }
+
+
+        private void ChangeControlColors(Control.ControlCollection controls, Color fromColor, Color toColor)
+        {
+            foreach (Control control in controls)
+            {
+                if (control.ForeColor == fromColor)
+                    control.ForeColor = toColor;
+
+                if (control.BackColor == fromColor)
+                    control.BackColor = toColor;
+
+                if (control.HasChildren)
+                    ChangeControlColors(control.Controls, fromColor, toColor);
+            }
+        }
+
     }
 }

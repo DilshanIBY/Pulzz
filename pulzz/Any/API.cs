@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace YourNamespace
+namespace Pulzz
 {
     public class OpenAIIntegration
     {

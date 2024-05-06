@@ -142,12 +142,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Any\API.cs" />
-    <Compile Include="Any\DatabaseReader.cs" />
-    <Compile Include="Any\Front_Any.cs">
+    <Compile Include="DB_Operations\DatabaseReader.cs" />
+    <Compile Include="Any\Any.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Any\Front_Any.Designer.cs">
-      <DependentUpon>Front_Any.cs</DependentUpon>
+    <Compile Include="Any\Any.Designer.cs">
+      <DependentUpon>Any.cs</DependentUpon>
     </Compile>
     <Compile Include="Backend\Back-Attendance.cs">
       <SubType>Form</SubType>
@@ -253,8 +253,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Any\Front_Any.resx">
-      <DependentUpon>Front_Any.cs</DependentUpon>
+    <EmbeddedResource Include="Any\Any.resx">
+      <DependentUpon>Any.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Backend\Back-Attendance.resx">
       <DependentUpon>Back-Attendance.cs</DependentUpon>
@@ -411,10 +411,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Pulzz_Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\PulzzDark.png" />
+    <None Include="Resources\imgSlide.Dark.png" />
     <None Include="Resources\1 %2811%29.png" />
     <None Include="Resources\technical-support.png" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

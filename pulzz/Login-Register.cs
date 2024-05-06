@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DatabaseOperations;
 
 namespace pulzz
 {
@@ -37,15 +33,16 @@ namespace pulzz
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\TOSHIBA\source\repos\Pulzz\pulzz\Pulzz_Database.mdf;Integrated Security=True");
-            String username, password;
 
-            username = txtuname.Text;
+            SqlConnection con = new SqlConnection(new DatabaseReader().getConnStr());
+            String email, password;
+
+            email = txtLogEmail.Text;
             password = txtpass.Text;
 
             try
             {
-                string querry = "SELECT * FROM Employee_details WHERE UserName = '" + txtusername.Text + "' AND Password ='" + txtpassword.Text + "'";
+                string querry = "SELECT * FROM Employees WHERE Email = '" + txtLogEmail.Text + "' AND Password ='" + txtpassword.Text + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(querry, con);
 
                 DataTable dtable = new DataTable();
@@ -53,7 +50,7 @@ namespace pulzz
 
                 if (dtable.Rows.Count > 0)
                 {
-                    username = txtusername.Text;
+                    email = txtLogEmail.Text;
                     password = txtpassword.Text;
 
                     Loading _load = new Loading();
@@ -63,10 +60,10 @@ namespace pulzz
                 else
                 {
                     MessageBox.Show("Invalid login details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtusername.Clear();
+                    txtLogEmail.Clear();
                     txtpassword.Clear();
 
-                    txtusername.Focus();
+                    txtLogEmail.Focus();
                 }
             }
             catch
@@ -76,6 +73,9 @@ namespace pulzz
             finally
             {
                 con.Close();
+                Loading _load = new Loading();
+                _load.Show();
+                this.Hide();
             }
         }
 
@@ -113,7 +113,7 @@ namespace pulzz
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtid.Text) || String.IsNullOrEmpty(txtname.Text) || string.IsNullOrEmpty(txtdob.Text) || String.IsNullOrEmpty(combogender.SelectedItem.ToString()) || string.IsNullOrEmpty(txtaddress.Text) || String.IsNullOrEmpty(combopost.SelectedItem.ToString()) || string.IsNullOrEmpty(txtcontact.Text) || String.IsNullOrEmpty(txtemail.Text) || string.IsNullOrEmpty(txtuname.Text) || String.IsNullOrEmpty(txtpass.Text) || string.IsNullOrEmpty(txtcompass.Text))
+            if (string.IsNullOrEmpty(txtid.Text) || String.IsNullOrEmpty(txtname.Text) || string.IsNullOrEmpty(txtdob.Text) || String.IsNullOrEmpty(combogender.SelectedItem.ToString()) || string.IsNullOrEmpty(txtaddress.Text) || String.IsNullOrEmpty(combopost.SelectedItem.ToString()) || string.IsNullOrEmpty(txtcontact.Text) || String.IsNullOrEmpty(txtemail.Text) || String.IsNullOrEmpty(txtpass.Text) || string.IsNullOrEmpty(txtcompass.Text))
             {
                 MessageBox.Show("Please fill every fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtid.Clear();
@@ -124,7 +124,6 @@ namespace pulzz
                 combopost.SelectedItem = 0;
                 txtcontact.Clear();
                 txtemail.Clear();
-                txtuname.Clear();
                 txtpass.Clear();
                 txtcompass.Clear();
             }
@@ -133,21 +132,19 @@ namespace pulzz
                 MessageBox.Show("Register Successfully");
             }
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\TOSHIBA\source\repos\Pulzz\pulzz\Pulzz_Database.mdf;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Employee_details]
+            SqlConnection con = new SqlConnection(new DatabaseReader().getConnStr());
+            SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Employees]
            ([EmployeeID]
-           ,[EmployeeName]
+           ,[FirstName]
            ,[DateOfBirth]
            ,[Gender]
            ,[Address]
-           ,[Post]
-           ,[ContactNo]
+           ,[Position]
+           ,[Phone]
            ,[Email]
-           ,[UserName]
-           ,[Password]
-           ,[ConfirmPassword])
+           ,[Password])
      VALUES
-           ('" + txtid.Text + "','" + txtname.Text + "','" + txtdob.Text + "', '" + combogender.SelectedItem.ToString() + "','" + txtaddress.Text + "','" + combopost.SelectedItem.ToString() + "','" + txtcontact.Text + "','" + txtemail.Text + "','" + txtuname.Text + "','" + txtpass.Text + "','" + txtcompass.Text + "')", con);
+           ('" + txtid.Text + "','" + txtname.Text + "','" + txtdob.Text + "', '" + combogender.SelectedItem.ToString() + "','" + txtaddress.Text + "','" + combopost.SelectedItem.ToString() + "','" + txtcontact.Text + "','" + txtemail.Text + "',','" + txtpass.Text + "',')", con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();

@@ -4,10 +4,8 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Windows.Forms;
-using System.Xml.Linq;
 
-namespace DatabaseReaderApp
+namespace DatabaseOperations
 {
     public class DatabaseReader
     {

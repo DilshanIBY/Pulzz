@@ -1,4 +1,4 @@
-﻿using DatabaseReaderApp;
+﻿using DatabaseOperations;
 using Guna.UI2.WinForms;
 using OpenAI.GPT3.ObjectModels.RequestModels;
 using pulzz.Properties;
@@ -8,9 +8,8 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Web.Configuration;
 using System.Windows.Forms;
-using YourNamespace;
 
-namespace WindowsFormsApp9
+namespace Pulzz
 {
     public partial class Any : Form
     {
@@ -133,13 +132,6 @@ namespace WindowsFormsApp9
             }
 
 
-
-
-
-
-
-
-
             // Implement typing effect for bot messages
             if (isBot)
             {
@@ -209,6 +201,17 @@ namespace WindowsFormsApp9
             InitializeChat();
         }
 
+        private async void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            string message = guna2TextBoxMessage.Text.Trim();
+            if (!string.IsNullOrEmpty(message))
+            {
+                AddMessage("User", message, false);
+                guna2TextBoxMessage.Clear();
+                await HandleUserInputAsync(message);
+            }
+        }
+
         public void anyFrontendUI()
         {
             guna2Panel1.FillColor = Color.FromArgb(0, 0, 64);
@@ -223,17 +226,6 @@ namespace WindowsFormsApp9
             guna2TextBoxMessage.BorderColor = Color.Red;
             guna2CircleButton1.FillColor = Color.Red;
 
-        }
-
-        private async void guna2CircleButton1_Click(object sender, EventArgs e)
-        {
-            string message = guna2TextBoxMessage.Text.Trim();
-            if (!string.IsNullOrEmpty(message))
-            {
-                AddMessage("User", message, false);
-                guna2TextBoxMessage.Clear();
-                await HandleUserInputAsync(message);
-            }
         }
 
         public void AnyDarkMode()
