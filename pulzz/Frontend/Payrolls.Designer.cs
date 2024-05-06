@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -76,7 +74,6 @@
             this.btnEnter = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.guna2ShadowPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -86,8 +83,6 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.guna2PictureBox2);
-            this.guna2ShadowPanel1.Controls.Add(this.label3);
             this.guna2ShadowPanel1.Controls.Add(this.label4);
             this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2ShadowPanel1.Controls.Add(this.guna2PictureBox1);
@@ -99,28 +94,6 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1259, 97);
             this.guna2ShadowPanel1.TabIndex = 41;
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::pulzz.Properties.Resources.WhatsApp_Image_2024_05_01_at_12_10_40_AM;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(27, 12);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(96, 68);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 5;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(129, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "PULZZ";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -128,7 +101,7 @@
             this.label4.ForeColor = System.Drawing.Color.Navy;
             this.label4.Location = new System.Drawing.Point(389, 40);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(546, 29);
+            this.label4.Size = new System.Drawing.Size(526, 28);
             this.label4.TabIndex = 3;
             this.label4.Text = "Employee Payroll and Companstion";
             // 
@@ -328,7 +301,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(83, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 17);
+            this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 41;
             this.label2.Text = "ETF Amount";
             // 
@@ -344,7 +317,7 @@
             this.lblEPF.AutoSize = true;
             this.lblEPF.Location = new System.Drawing.Point(80, 71);
             this.lblEPF.Name = "lblEPF";
-            this.lblEPF.Size = new System.Drawing.Size(86, 17);
+            this.lblEPF.Size = new System.Drawing.Size(81, 16);
             this.lblEPF.TabIndex = 39;
             this.lblEPF.Text = "EPF Amount";
             // 
@@ -353,7 +326,7 @@
             this.chkEPF.AutoSize = true;
             this.chkEPF.Location = new System.Drawing.Point(7, 70);
             this.chkEPF.Name = "chkEPF";
-            this.chkEPF.Size = new System.Drawing.Size(56, 21);
+            this.chkEPF.Size = new System.Drawing.Size(55, 20);
             this.chkEPF.TabIndex = 1;
             this.chkEPF.Text = "EPF";
             this.chkEPF.UseVisualStyleBackColor = true;
@@ -363,7 +336,7 @@
             this.chkETF.AutoSize = true;
             this.chkETF.Location = new System.Drawing.Point(7, 31);
             this.chkETF.Name = "chkETF";
-            this.chkETF.Size = new System.Drawing.Size(56, 21);
+            this.chkETF.Size = new System.Drawing.Size(55, 20);
             this.chkETF.TabIndex = 0;
             this.chkETF.Text = "ETF";
             this.chkETF.UseVisualStyleBackColor = true;
@@ -580,7 +553,6 @@
             this.Load += new System.EventHandler(this.Payrolls_Load);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -595,8 +567,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
