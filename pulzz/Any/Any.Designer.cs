@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp9
+﻿namespace Pulzz
 {
     partial class Any
     {

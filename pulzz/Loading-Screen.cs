@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pulzz;
 
 namespace pulzz
 {
@@ -23,8 +24,8 @@ namespace pulzz
             {
                 timer1.Stop();
 
-                Menu p = new Menu();
-                p.Show();
+                Menu front_ui = new Menu();
+                front_ui.Show();
                 this.Hide();
 
             }

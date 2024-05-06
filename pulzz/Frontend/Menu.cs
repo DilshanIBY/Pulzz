@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Web.Configuration;
 using Control = System.Windows.Forms.Control;
-using WindowsFormsApp9;
+using Pulzz;
 
 namespace pulzz
 {

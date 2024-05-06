@@ -142,7 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Any\API.cs" />
-    <Compile Include="Any\DatabaseReader.cs" />
+    <Compile Include="DB_Operations\DatabaseReader.cs" />
     <Compile Include="Any\Any.cs">
       <SubType>Form</SubType>
     </Compile>

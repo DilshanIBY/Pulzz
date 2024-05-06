@@ -1,4 +1,4 @@
-﻿using DatabaseReaderApp;
+﻿using DatabaseOperations;
 using Guna.UI2.WinForms;
 using OpenAI.GPT3.ObjectModels.RequestModels;
 using pulzz.Properties;
@@ -8,9 +8,8 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Web.Configuration;
 using System.Windows.Forms;
-using YourNamespace;
 
-namespace WindowsFormsApp9
+namespace Pulzz
 {
     public partial class Any : Form
     {
