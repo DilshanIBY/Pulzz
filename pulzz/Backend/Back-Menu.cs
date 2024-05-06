@@ -32,7 +32,7 @@ namespace pulzz.Backend
             UpdateContainerUI();
         }
 
-        private void container(object _form)
+        public void container(object _form)
         {
 
             if (guna2Panel_container.Controls.Count > 0) guna2Panel_container.Controls.Clear();

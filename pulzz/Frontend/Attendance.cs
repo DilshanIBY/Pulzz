@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseOperations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,13 +12,13 @@ using System.Windows.Forms;
 
 namespace pulzz
 {
-    public partial class frmCheckAttendence : Form
+    public partial class Attendance : Form
     {
 
-        SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\USER\\source\\repos\\Pulzz\\pulzz\\Pulzz_Database.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(new DatabaseReader().getConnStr());
 
         SqlCommand cm = new SqlCommand();
-        public frmCheckAttendence()
+        public Attendance()
         {
             InitializeComponent();
             LoadRecord1();

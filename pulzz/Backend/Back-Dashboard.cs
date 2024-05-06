@@ -1,4 +1,5 @@
-﻿using pulzz.Frontend;
+﻿using DatabaseOperations;
+using pulzz.Frontend;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace pulzz.Backend
 {
     public partial class Back_Dashboard : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-JH0VPVK\SQLEXPRESS;Initial Catalog=EMP;Integrated Security=True");
+        SqlConnection con = new SqlConnection(new DatabaseReader().getConnStr());
         SqlDataAdapter da = new SqlDataAdapter();
         DataTable dt = new DataTable();
         public Back_Dashboard()
@@ -28,10 +29,16 @@ namespace pulzz.Backend
         }
         void BindData()
         {
-            SqlCommand cmd = new SqlCommand(@"SELECT [EmployeeID], [Gender], [Post], [Attendence] FROM [dbo].[Employee_details]", con);
-            da.SelectCommand = cmd;
-            da.Fill(dt);
-            guna2DataGridView1.DataSource = dt;
+            try
+            {
+                SqlCommand cmd = new SqlCommand(@"SELECT [EmployeeID], [Gender], [Post], [Attendence] FROM [dbo].[Employee_details]", con);
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+                guna2DataGridView1.DataSource = dt;
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -95,39 +102,36 @@ namespace pulzz.Backend
             DataTable dt = new DataTable();
         }
 
+        Back_Menu bk = new Back_Menu();
+
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
-            EmployeeDashboard form2 = new EmployeeDashboard();
-            form2.Show();
-            this.Hide();
+            bk.container(new Back_Profiles());
+            bk.UpdateContainerUI();
         }
 
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
-            ShiftAndSchedule form2 = new ShiftAndSchedule();
-            form2.Show();
-            this.Hide();
+            bk.container(new Back_Shifts());
+            bk.UpdateContainerUI();
         }
 
         private void guna2Panel3_Paint(object sender, PaintEventArgs e)
         {
-            LeveRequest form2 = new LeaveRequest();
-            form2.Show();
-            this.Hide();
+            bk.container(new Back_Leaves());
+            bk.UpdateContainerUI();
         }
 
         private void guna2Panel4_Paint(object sender, PaintEventArgs e)
         {
-            Attendence form2 = new Attendence();
-            form2.Show();
-            this.Hide();
+            bk.container(new Back_Attendance());
+            bk.UpdateContainerUI();
         }
 
         private void guna2Panel5_Paint(object sender, PaintEventArgs e)
         {
-            Payrolls form2 = new Payrolls();
-            form2.Show();
-            this.Hide();
+            bk.container(new Back_Payrolls());
+            bk.UpdateContainerUI();
         }
     }
 }

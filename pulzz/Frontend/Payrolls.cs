@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseOperations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,7 @@ namespace pulzz.Frontend
     public partial class Payrolls : Form
     {
         //Data Source=DESKTOP-H7G6VPS;Initial Catalog=EmpSalary;Integrated Security=True
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\abeyk\source\repos\Pulzz\pulzz\Pulzz_Database.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection(new DatabaseReader().getConnStr());
         SqlCommand cmd;
         SqlDataAdapter adapt;
 

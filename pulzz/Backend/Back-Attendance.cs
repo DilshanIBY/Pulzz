@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseOperations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,13 @@ using System.Windows.Forms;
 
 namespace pulzz.Backend
 {
-    public partial class AdninForm : Form
+    public partial class Back_Attendance : Form
     {
 
-        SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\USER\\source\\repos\\Pulzz\\pulzz\\Pulzz_Database.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(new DatabaseReader().getConnStr());
 
         SqlCommand cm = new SqlCommand();
-        public AdninForm()
+        public Back_Attendance()
         {
             InitializeComponent();
             LoadRecord1();

@@ -1,6 +1,6 @@
 ﻿namespace pulzz.Backend
 {
-    partial class AdninForm
+    partial class Back_Attendance
     {
         /// <summary>
         /// Required designer variable.

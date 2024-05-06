@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Runtime.InteropServices;
+using DatabaseOperations;
 
 namespace pulzz.Frontend
 {
@@ -20,9 +21,9 @@ namespace pulzz.Frontend
             InitializeComponent();
         }
 
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\source\repos\Pulzz\pulzz\Pulzz_Database.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(new DatabaseReader().getConnStr());
 
-       
+
         private void LapplyBtn_Click(object sender, EventArgs e)
         {
             // declaring variables to store data

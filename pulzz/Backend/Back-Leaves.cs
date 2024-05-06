@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseOperations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,7 @@ namespace pulzz.Backend
             InitializeComponent();
         }
 
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\source\repos\Pulzz\pulzz\Pulzz_Database.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(new DatabaseReader().getConnStr());
 
 
         private void LAenterBtn_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace pulzz
 {
-    partial class frmCheckAttendence
+    partial class Attendance
     {
         /// <summary>
         /// Required designer variable.
