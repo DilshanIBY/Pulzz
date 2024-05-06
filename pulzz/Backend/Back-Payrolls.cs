@@ -21,7 +21,7 @@ namespace pulzz.Backend
         SqlDataAdapter adapt;
 
         double sal = 0;
-        double etf, epf, etfamount, epfamount, gsal, allow, nsal;
+        double etfamount, epfamount, gsal, allow, nsal;
 
         
 
