@@ -47,16 +47,17 @@ namespace pulzz
         {
             Guna2Button b = (Guna2Button)sender;
             string uiMode = WebConfigurationManager.AppSettings["UIMode"];
+            imgSlide.Location = new Point(b.Location.X + 156, b.Location.Y - 28);
+            imgSlide.SendToBack();
+            imgSlideDark.Location = new Point(b.Location.X + 156, b.Location.Y - 28);
+            imgSlideDark.SendToBack();
             if (uiMode == "light")
             {
                 imgSlide.Visible = true;
-                imgSlide.Location = new Point(b.Location.X + 156, b.Location.Y - 28);
-                imgSlide.SendToBack();
-            }else
+            }
+            else
             {
                 imgSlideDark.Visible = true;
-                imgSlideDark.Location = new Point(b.Location.X + 156, b.Location.Y - 28);
-                imgSlideDark.SendToBack();
             }
 
    
@@ -244,6 +245,7 @@ namespace pulzz
                     pulzzLogo.Visible = false;
                     pulzzLogoDark.Visible = true;
                     imgSlide.Visible = false;
+                    imgSlideDark.Visible = true;
                     ForeColor = Color.White;
                     BackColor = Color.FromArgb(5, 5, 5);
                     guna2Panel1.ForeColor = Color.White;
@@ -268,6 +270,7 @@ namespace pulzz
                     pulzzLogoDark.Visible = false;
                     pulzzLogo.Visible = true;
                     imgSlideDark.Visible = false;
+                    imgSlide.Visible = true;
                     ForeColor = Color.FromArgb(5, 5, 5);
                     BackColor = Color.White;
                     guna2Panel1.ForeColor = Color.FromArgb(5, 5, 5);
@@ -302,6 +305,7 @@ namespace pulzz
                 pulzzLogo.Visible = false;
                 pulzzLogoDark.Visible = true;
                 imgSlide.Visible = false;
+                imgSlideDark.Visible = true;
                 ForeColor = Color.White;
                 BackColor = Color.FromArgb(5, 5, 5);
                 guna2Panel1.ForeColor = Color.White;
@@ -344,6 +348,5 @@ namespace pulzz
                     ChangeControlColors(control.Controls, fromColor, toColor);
             }
         }
-
     }
 }
