@@ -521,7 +521,7 @@
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(141, 45);
             this.SearchBtn.TabIndex = 76;
-            this.SearchBtn.Text = "Clear";
+            this.SearchBtn.Text = "Search";
             // 
             // Payrolls
             // 

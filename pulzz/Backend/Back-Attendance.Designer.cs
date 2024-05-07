@@ -185,7 +185,7 @@
             this.CheckInBtn.ForeColor = System.Drawing.Color.White;
             this.CheckInBtn.Location = new System.Drawing.Point(587, 479);
             this.CheckInBtn.Name = "CheckInBtn";
-            this.CheckInBtn.Size = new System.Drawing.Size(141, 45);
+            this.CheckInBtn.Size = new System.Drawing.Size(150, 45);
             this.CheckInBtn.TabIndex = 180;
             this.CheckInBtn.Text = "Check In";
             this.CheckInBtn.Click += new System.EventHandler(this.CheckInBtn_Click);
@@ -202,7 +202,7 @@
             this.CheckOutBtn.ForeColor = System.Drawing.Color.White;
             this.CheckOutBtn.Location = new System.Drawing.Point(586, 673);
             this.CheckOutBtn.Name = "CheckOutBtn";
-            this.CheckOutBtn.Size = new System.Drawing.Size(141, 45);
+            this.CheckOutBtn.Size = new System.Drawing.Size(150, 45);
             this.CheckOutBtn.TabIndex = 181;
             this.CheckOutBtn.Text = "Check Out";
             this.CheckOutBtn.Click += new System.EventHandler(this.CheckOutBtn_Click);
@@ -219,7 +219,7 @@
             this.AbsentBtn.ForeColor = System.Drawing.Color.White;
             this.AbsentBtn.Location = new System.Drawing.Point(1012, 95);
             this.AbsentBtn.Name = "AbsentBtn";
-            this.AbsentBtn.Size = new System.Drawing.Size(141, 45);
+            this.AbsentBtn.Size = new System.Drawing.Size(150, 45);
             this.AbsentBtn.TabIndex = 182;
             this.AbsentBtn.Text = "Absent";
             this.AbsentBtn.Click += new System.EventHandler(this.AbsentBtn_Click);

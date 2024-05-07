@@ -29,12 +29,6 @@ namespace pulzz
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            button2.Show();
-            button3.Show();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             try
