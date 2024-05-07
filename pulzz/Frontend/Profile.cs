@@ -26,5 +26,10 @@ namespace pulzz.Frontend
         {
             
         }
+
+        private void LapplyBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
