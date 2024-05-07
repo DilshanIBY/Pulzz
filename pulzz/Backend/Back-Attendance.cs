@@ -437,7 +437,7 @@ namespace pulzz.Backend
 
                     cm.ExecuteNonQuery();
                     conn.Close();
-                    MessageBox.Show("Set Clock In successfully");
+                    MessageBox.Show("Set Absense In successfully");
                 }
             }
             catch (Exception ex)
