@@ -150,11 +150,25 @@ namespace pulzz
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            button2.Show();
-            button3.Show();
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void AbsentsBtn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -187,7 +201,7 @@ namespace pulzz
             label1.Show();
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void PresentsBtn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -220,9 +234,10 @@ namespace pulzz
             label1.Show();
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
+        private void FindBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            PresentsBtn.Show();
+            AbsentsBtn.Show();
         }
     }
 }

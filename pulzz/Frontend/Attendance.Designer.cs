@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.txt1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.FindBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.PresentsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.AbsentsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // label1
@@ -49,56 +48,6 @@
             this.label1.TabIndex = 162;
             this.label1.Text = "Results";
             this.label1.Visible = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(543, 450);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(311, 53);
-            this.button3.TabIndex = 161;
-            this.button3.Text = "Employee Absent Days";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Teal;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(171, 450);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(311, 53);
-            this.button2.TabIndex = 160;
-            this.button2.Text = "Employee Present Days";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(633, 316);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 53);
-            this.button1.TabIndex = 159;
-            this.button1.Text = "Find";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txt1
             // 
@@ -128,42 +77,76 @@
             this.label4.Location = new System.Drawing.Point(365, 98);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(312, 31);
+            this.label4.Size = new System.Drawing.Size(322, 31);
             this.label4.TabIndex = 156;
-            this.label4.Text = "Attendence Dashboard";
+            this.label4.Text = "Check Your Attendance";
             // 
-            // button4
+            // FindBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(678, 680);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(301, 53);
-            this.button4.TabIndex = 155;
-            this.button4.Text = "Close";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.FindBtn.BorderRadius = 10;
+            this.FindBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.FindBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.FindBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.FindBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.FindBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(68)))), ((int)(((byte)(234)))));
+            this.FindBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.FindBtn.ForeColor = System.Drawing.Color.White;
+            this.FindBtn.Location = new System.Drawing.Point(713, 316);
+            this.FindBtn.Name = "FindBtn";
+            this.FindBtn.Size = new System.Drawing.Size(141, 45);
+            this.FindBtn.TabIndex = 163;
+            this.FindBtn.Text = "Find";
+            this.FindBtn.Click += new System.EventHandler(this.FindBtn_Click);
             // 
-            // frmCheckAttendence
+            // PresentsBtn
+            // 
+            this.PresentsBtn.BorderRadius = 10;
+            this.PresentsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.PresentsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.PresentsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.PresentsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.PresentsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.PresentsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.PresentsBtn.ForeColor = System.Drawing.Color.White;
+            this.PresentsBtn.Location = new System.Drawing.Point(543, 458);
+            this.PresentsBtn.Name = "PresentsBtn";
+            this.PresentsBtn.Size = new System.Drawing.Size(311, 45);
+            this.PresentsBtn.TabIndex = 164;
+            this.PresentsBtn.Text = "Absent Days";
+            this.PresentsBtn.Click += new System.EventHandler(this.PresentsBtn_Click);
+            // 
+            // AbsentsBtn
+            // 
+            this.AbsentsBtn.BorderRadius = 10;
+            this.AbsentsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AbsentsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AbsentsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AbsentsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AbsentsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.AbsentsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.AbsentsBtn.ForeColor = System.Drawing.Color.White;
+            this.AbsentsBtn.Location = new System.Drawing.Point(171, 458);
+            this.AbsentsBtn.Name = "AbsentsBtn";
+            this.AbsentsBtn.Size = new System.Drawing.Size(311, 45);
+            this.AbsentsBtn.TabIndex = 165;
+            this.AbsentsBtn.Text = "Present Days";
+            this.AbsentsBtn.Click += new System.EventHandler(this.AbsentsBtn_Click);
+            // 
+            // Attendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1348, 863);
+            this.Controls.Add(this.AbsentsBtn);
+            this.Controls.Add(this.PresentsBtn);
+            this.Controls.Add(this.FindBtn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txt1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCheckAttendence";
+            this.Name = "Attendance";
             this.Text = "Frontend_ATTENDS";
             this.Load += new System.EventHandler(this.frmCheckAttendence_Load);
             this.ResumeLayout(false);
@@ -174,12 +157,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox txt1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button4;
+        private Guna.UI2.WinForms.Guna2Button FindBtn;
+        private Guna.UI2.WinForms.Guna2Button PresentsBtn;
+        private Guna.UI2.WinForms.Guna2Button AbsentsBtn;
     }
 }

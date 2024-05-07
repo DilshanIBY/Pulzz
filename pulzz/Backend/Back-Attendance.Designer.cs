@@ -29,62 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt2 = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txt4 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.txt3 = new System.Windows.Forms.DateTimePicker();
             this.txt1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.CheckInBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.CheckOutBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.AbsentBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label6.Location = new System.Drawing.Point(36, 25);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 37);
-            this.label6.TabIndex = 150;
-            this.label6.Text = "Attendence";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1321, 62);
-            this.panel1.TabIndex = 164;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(16, 11);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 37);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Attendence";
             // 
             // dateTimePicker1
             // 
@@ -141,38 +101,6 @@
             this.txt2.Size = new System.Drawing.Size(436, 40);
             this.txt2.TabIndex = 174;
             this.txt2.ValueChanged += new System.EventHandler(this.txt2_ValueChanged_1);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(507, 673);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(221, 53);
-            this.button2.TabIndex = 173;
-            this.button2.Text = "Check Out";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(507, 479);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 53);
-            this.button1.TabIndex = 172;
-            this.button1.Text = "Check In";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label1
             // 
@@ -240,96 +168,106 @@
             this.label3.TabIndex = 166;
             this.label3.Text = "Employee ID";
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(944, 711);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(301, 53);
-            this.button4.TabIndex = 165;
-            this.button4.Text = "Log Out";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button3
+            // CheckInBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(932, 95);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(221, 53);
-            this.button3.TabIndex = 179;
-            this.button3.Text = "Absent";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.CheckInBtn.BorderRadius = 10;
+            this.CheckInBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CheckInBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CheckInBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CheckInBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CheckInBtn.FillColor = System.Drawing.Color.Red;
+            this.CheckInBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckInBtn.ForeColor = System.Drawing.Color.White;
+            this.CheckInBtn.Location = new System.Drawing.Point(587, 479);
+            this.CheckInBtn.Name = "CheckInBtn";
+            this.CheckInBtn.Size = new System.Drawing.Size(141, 45);
+            this.CheckInBtn.TabIndex = 180;
+            this.CheckInBtn.Text = "Check In";
+            this.CheckInBtn.Click += new System.EventHandler(this.CheckInBtn_Click);
             // 
-            // AdninForm
+            // CheckOutBtn
+            // 
+            this.CheckOutBtn.BorderRadius = 10;
+            this.CheckOutBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CheckOutBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CheckOutBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CheckOutBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CheckOutBtn.FillColor = System.Drawing.Color.Red;
+            this.CheckOutBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckOutBtn.ForeColor = System.Drawing.Color.White;
+            this.CheckOutBtn.Location = new System.Drawing.Point(586, 673);
+            this.CheckOutBtn.Name = "CheckOutBtn";
+            this.CheckOutBtn.Size = new System.Drawing.Size(141, 45);
+            this.CheckOutBtn.TabIndex = 181;
+            this.CheckOutBtn.Text = "Check Out";
+            this.CheckOutBtn.Click += new System.EventHandler(this.CheckOutBtn_Click);
+            // 
+            // AbsentBtn
+            // 
+            this.AbsentBtn.BorderRadius = 10;
+            this.AbsentBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AbsentBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AbsentBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AbsentBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AbsentBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.AbsentBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AbsentBtn.ForeColor = System.Drawing.Color.White;
+            this.AbsentBtn.Location = new System.Drawing.Point(1012, 95);
+            this.AbsentBtn.Name = "AbsentBtn";
+            this.AbsentBtn.Size = new System.Drawing.Size(141, 45);
+            this.AbsentBtn.TabIndex = 182;
+            this.AbsentBtn.Text = "Absent";
+            this.AbsentBtn.Click += new System.EventHandler(this.AbsentBtn_Click);
+            // 
+            // Back_Attendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1321, 796);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.AbsentBtn);
+            this.Controls.Add(this.CheckOutBtn);
+            this.Controls.Add(this.CheckInBtn);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt3);
             this.Controls.Add(this.txt1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AdninForm";
+            this.Name = "Back_Attendance";
             this.Text = "Back_Attendance";
             this.Load += new System.EventHandler(this.AdninForm_Load_1);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker txt2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker txt4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker txt3;
         private System.Windows.Forms.ComboBox txt1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button3;
+        private Guna.UI2.WinForms.Guna2Button CheckInBtn;
+        private Guna.UI2.WinForms.Guna2Button CheckOutBtn;
+        private Guna.UI2.WinForms.Guna2Button AbsentBtn;
     }
 }
