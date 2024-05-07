@@ -44,6 +44,7 @@
             this.CheckInBtn = new Guna.UI2.WinForms.Guna2Button();
             this.CheckOutBtn = new Guna.UI2.WinForms.Guna2Button();
             this.AbsentBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -51,7 +52,7 @@
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(292, 409);
+            this.dateTimePicker1.Location = new System.Drawing.Point(292, 358);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(436, 40);
@@ -62,7 +63,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(833, 408);
+            this.label5.Location = new System.Drawing.Point(851, 174);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 31);
@@ -73,7 +74,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(833, 369);
+            this.label4.Location = new System.Drawing.Point(851, 135);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 31);
@@ -85,7 +86,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 259);
+            this.label2.Location = new System.Drawing.Point(40, 208);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 33);
@@ -95,7 +96,7 @@
             // txt2
             // 
             this.txt2.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.txt2.Location = new System.Drawing.Point(291, 257);
+            this.txt2.Location = new System.Drawing.Point(291, 206);
             this.txt2.Margin = new System.Windows.Forms.Padding(4);
             this.txt2.Name = "txt2";
             this.txt2.Size = new System.Drawing.Size(436, 40);
@@ -106,7 +107,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 607);
+            this.label1.Location = new System.Drawing.Point(40, 556);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 33);
@@ -118,7 +119,7 @@
             this.txt4.Enabled = false;
             this.txt4.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.txt4.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.txt4.Location = new System.Drawing.Point(291, 606);
+            this.txt4.Location = new System.Drawing.Point(291, 555);
             this.txt4.Margin = new System.Windows.Forms.Padding(4);
             this.txt4.Name = "txt4";
             this.txt4.Size = new System.Drawing.Size(436, 40);
@@ -128,7 +129,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(40, 410);
+            this.label8.Location = new System.Drawing.Point(40, 359);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(99, 33);
@@ -140,7 +141,7 @@
             this.txt3.Enabled = false;
             this.txt3.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.txt3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.txt3.Location = new System.Drawing.Point(291, 409);
+            this.txt3.Location = new System.Drawing.Point(291, 358);
             this.txt3.Margin = new System.Windows.Forms.Padding(4);
             this.txt3.Name = "txt3";
             this.txt3.Size = new System.Drawing.Size(436, 40);
@@ -150,7 +151,7 @@
             // 
             this.txt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt1.FormattingEnabled = true;
-            this.txt1.Location = new System.Drawing.Point(291, 186);
+            this.txt1.Location = new System.Drawing.Point(291, 135);
             this.txt1.Margin = new System.Windows.Forms.Padding(4);
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(436, 37);
@@ -161,7 +162,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 192);
+            this.label3.Location = new System.Drawing.Point(39, 141);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 33);
@@ -183,7 +184,7 @@
             this.CheckInBtn.FillColor = System.Drawing.Color.Red;
             this.CheckInBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckInBtn.ForeColor = System.Drawing.Color.White;
-            this.CheckInBtn.Location = new System.Drawing.Point(587, 479);
+            this.CheckInBtn.Location = new System.Drawing.Point(587, 428);
             this.CheckInBtn.Name = "CheckInBtn";
             this.CheckInBtn.Size = new System.Drawing.Size(150, 45);
             this.CheckInBtn.TabIndex = 180;
@@ -200,7 +201,7 @@
             this.CheckOutBtn.FillColor = System.Drawing.Color.Red;
             this.CheckOutBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckOutBtn.ForeColor = System.Drawing.Color.White;
-            this.CheckOutBtn.Location = new System.Drawing.Point(586, 673);
+            this.CheckOutBtn.Location = new System.Drawing.Point(586, 622);
             this.CheckOutBtn.Name = "CheckOutBtn";
             this.CheckOutBtn.Size = new System.Drawing.Size(150, 45);
             this.CheckOutBtn.TabIndex = 181;
@@ -217,12 +218,23 @@
             this.AbsentBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.AbsentBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AbsentBtn.ForeColor = System.Drawing.Color.White;
-            this.AbsentBtn.Location = new System.Drawing.Point(1012, 95);
+            this.AbsentBtn.Location = new System.Drawing.Point(1013, 622);
             this.AbsentBtn.Name = "AbsentBtn";
             this.AbsentBtn.Size = new System.Drawing.Size(150, 45);
             this.AbsentBtn.TabIndex = 182;
             this.AbsentBtn.Text = "Absent";
             this.AbsentBtn.Click += new System.EventHandler(this.AbsentBtn_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(499, 38);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(264, 31);
+            this.label6.TabIndex = 183;
+            this.label6.Text = "Update Attendance";
             // 
             // Back_Attendance
             // 
@@ -230,6 +242,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1321, 796);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.AbsentBtn);
             this.Controls.Add(this.CheckOutBtn);
             this.Controls.Add(this.CheckInBtn);
@@ -269,5 +282,6 @@
         private Guna.UI2.WinForms.Guna2Button CheckInBtn;
         private Guna.UI2.WinForms.Guna2Button CheckOutBtn;
         private Guna.UI2.WinForms.Guna2Button AbsentBtn;
+        private System.Windows.Forms.Label label6;
     }
 }

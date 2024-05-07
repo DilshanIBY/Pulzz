@@ -61,7 +61,7 @@
             this.LempName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LempName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LempName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LempName.Location = new System.Drawing.Point(918, 210);
+            this.LempName.Location = new System.Drawing.Point(918, 231);
             this.LempName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LempName.Name = "LempName";
             this.LempName.PasswordChar = '\0';
@@ -82,7 +82,7 @@
             this.LempId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LempId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LempId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LempId.Location = new System.Drawing.Point(402, 210);
+            this.LempId.Location = new System.Drawing.Point(402, 231);
             this.LempId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LempId.Name = "LempId";
             this.LempId.PasswordChar = '\0';
@@ -103,7 +103,7 @@
             this.LformId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LformId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LformId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LformId.Location = new System.Drawing.Point(402, 123);
+            this.LformId.Location = new System.Drawing.Point(402, 144);
             this.LformId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LformId.Name = "LformId";
             this.LformId.PasswordChar = '\0';
@@ -123,7 +123,7 @@
             this.LclearBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(68)))), ((int)(((byte)(234)))));
             this.LclearBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LclearBtn.ForeColor = System.Drawing.Color.White;
-            this.LclearBtn.Location = new System.Drawing.Point(918, 642);
+            this.LclearBtn.Location = new System.Drawing.Point(925, 740);
             this.LclearBtn.Name = "LclearBtn";
             this.LclearBtn.Size = new System.Drawing.Size(141, 45);
             this.LclearBtn.TabIndex = 30;
@@ -140,7 +140,7 @@
             this.LapplyBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(68)))), ((int)(((byte)(234)))));
             this.LapplyBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LapplyBtn.ForeColor = System.Drawing.Color.White;
-            this.LapplyBtn.Location = new System.Drawing.Point(1088, 642);
+            this.LapplyBtn.Location = new System.Drawing.Point(1100, 740);
             this.LapplyBtn.Name = "LapplyBtn";
             this.LapplyBtn.Size = new System.Drawing.Size(141, 45);
             this.LapplyBtn.TabIndex = 29;
@@ -155,7 +155,7 @@
             this.Lend.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.Lend.ForeColor = System.Drawing.Color.White;
             this.Lend.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Lend.Location = new System.Drawing.Point(402, 386);
+            this.Lend.Location = new System.Drawing.Point(402, 407);
             this.Lend.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.Lend.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.Lend.Name = "Lend";
@@ -171,7 +171,7 @@
             this.Lstart.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.Lstart.ForeColor = System.Drawing.Color.White;
             this.Lstart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Lstart.Location = new System.Drawing.Point(918, 307);
+            this.Lstart.Location = new System.Drawing.Point(918, 328);
             this.Lstart.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.Lstart.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.Lstart.Name = "Lstart";
@@ -198,7 +198,7 @@
             "Others       ",
             "Paternity        ",
             "Unpaid"});
-            this.Ltype.Location = new System.Drawing.Point(402, 307);
+            this.Ltype.Location = new System.Drawing.Point(402, 328);
             this.Ltype.Name = "Ltype";
             this.Ltype.Size = new System.Drawing.Size(229, 36);
             this.Ltype.TabIndex = 26;
@@ -207,7 +207,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(182, 386);
+            this.label7.Location = new System.Drawing.Point(182, 407);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 29);
             this.label7.TabIndex = 25;
@@ -217,7 +217,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(698, 307);
+            this.label6.Location = new System.Drawing.Point(698, 328);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 29);
             this.label6.TabIndex = 24;
@@ -227,7 +227,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(182, 314);
+            this.label5.Location = new System.Drawing.Point(182, 335);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(149, 29);
             this.label5.TabIndex = 23;
@@ -237,7 +237,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(698, 229);
+            this.label4.Location = new System.Drawing.Point(698, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(206, 29);
             this.label4.TabIndex = 22;
@@ -247,7 +247,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(182, 229);
+            this.label3.Location = new System.Drawing.Point(182, 250);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(159, 29);
             this.label3.TabIndex = 21;
@@ -257,7 +257,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(182, 142);
+            this.label8.Location = new System.Drawing.Point(182, 163);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(112, 29);
             this.label8.TabIndex = 20;
@@ -283,7 +283,7 @@
             this.LenterBtn.FillColor = System.Drawing.Color.Empty;
             this.LenterBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LenterBtn.ForeColor = System.Drawing.Color.White;
-            this.LenterBtn.Location = new System.Drawing.Point(823, 123);
+            this.LenterBtn.Location = new System.Drawing.Point(823, 144);
             this.LenterBtn.Name = "LenterBtn";
             this.LenterBtn.Size = new System.Drawing.Size(141, 45);
             this.LenterBtn.TabIndex = 36;
@@ -294,7 +294,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(698, 393);
+            this.label2.Location = new System.Drawing.Point(698, 414);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 29);
             this.label2.TabIndex = 37;
@@ -312,7 +312,7 @@
             this.LStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LStatus.Location = new System.Drawing.Point(918, 386);
+            this.LStatus.Location = new System.Drawing.Point(918, 407);
             this.LStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LStatus.Name = "LStatus";
             this.LStatus.PasswordChar = '\0';
@@ -331,7 +331,7 @@
             this.enterBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.enterBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.enterBtn.ForeColor = System.Drawing.Color.White;
-            this.enterBtn.Location = new System.Drawing.Point(763, 126);
+            this.enterBtn.Location = new System.Drawing.Point(763, 147);
             this.enterBtn.Name = "enterBtn";
             this.enterBtn.Size = new System.Drawing.Size(141, 45);
             this.enterBtn.TabIndex = 39;
@@ -343,7 +343,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1294, 722);
+            this.ClientSize = new System.Drawing.Size(1294, 850);
             this.Controls.Add(this.enterBtn);
             this.Controls.Add(this.LStatus);
             this.Controls.Add(this.label2);

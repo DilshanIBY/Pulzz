@@ -58,7 +58,7 @@
             this.LAclearBtn.FillColor = System.Drawing.Color.Red;
             this.LAclearBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LAclearBtn.ForeColor = System.Drawing.Color.White;
-            this.LAclearBtn.Location = new System.Drawing.Point(917, 693);
+            this.LAclearBtn.Location = new System.Drawing.Point(925, 740);
             this.LAclearBtn.Name = "LAclearBtn";
             this.LAclearBtn.Size = new System.Drawing.Size(141, 45);
             this.LAclearBtn.TabIndex = 52;
@@ -79,7 +79,7 @@
             this.LAStatus.Items.AddRange(new object[] {
             "Approved",
             "Rejected"});
-            this.LAStatus.Location = new System.Drawing.Point(470, 442);
+            this.LAStatus.Location = new System.Drawing.Point(470, 495);
             this.LAStatus.Name = "LAStatus";
             this.LAStatus.Size = new System.Drawing.Size(200, 36);
             this.LAStatus.TabIndex = 51;
@@ -94,7 +94,7 @@
             this.LAsaveBtn.FillColor = System.Drawing.Color.Red;
             this.LAsaveBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LAsaveBtn.ForeColor = System.Drawing.Color.White;
-            this.LAsaveBtn.Location = new System.Drawing.Point(1088, 693);
+            this.LAsaveBtn.Location = new System.Drawing.Point(1100, 740);
             this.LAsaveBtn.Name = "LAsaveBtn";
             this.LAsaveBtn.Size = new System.Drawing.Size(141, 45);
             this.LAsaveBtn.TabIndex = 50;
@@ -109,7 +109,7 @@
             this.LAend.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LAend.ForeColor = System.Drawing.Color.White;
             this.LAend.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.LAend.Location = new System.Drawing.Point(344, 358);
+            this.LAend.Location = new System.Drawing.Point(344, 411);
             this.LAend.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.LAend.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.LAend.Name = "LAend";
@@ -125,7 +125,7 @@
             this.LAstart.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LAstart.ForeColor = System.Drawing.Color.White;
             this.LAstart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.LAstart.Location = new System.Drawing.Point(889, 267);
+            this.LAstart.Location = new System.Drawing.Point(889, 320);
             this.LAstart.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.LAstart.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.LAstart.Name = "LAstart";
@@ -137,7 +137,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(169, 433);
+            this.label8.Location = new System.Drawing.Point(169, 486);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(266, 29);
             this.label8.TabIndex = 47;
@@ -147,7 +147,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(169, 365);
+            this.label7.Location = new System.Drawing.Point(169, 418);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 29);
             this.label7.TabIndex = 46;
@@ -157,7 +157,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(686, 267);
+            this.label6.Location = new System.Drawing.Point(686, 320);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 29);
             this.label6.TabIndex = 45;
@@ -173,7 +173,7 @@
             this.LAenterBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LAenterBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LAenterBtn.ForeColor = System.Drawing.Color.White;
-            this.LAenterBtn.Location = new System.Drawing.Point(691, 80);
+            this.LAenterBtn.Location = new System.Drawing.Point(691, 133);
             this.LAenterBtn.Name = "LAenterBtn";
             this.LAenterBtn.Size = new System.Drawing.Size(141, 45);
             this.LAenterBtn.TabIndex = 44;
@@ -184,7 +184,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(169, 267);
+            this.label5.Location = new System.Drawing.Point(169, 320);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(149, 29);
             this.label5.TabIndex = 43;
@@ -194,7 +194,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(677, 187);
+            this.label4.Location = new System.Drawing.Point(677, 240);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(206, 29);
             this.label4.TabIndex = 42;
@@ -212,7 +212,7 @@
             this.LAtype.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LAtype.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LAtype.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LAtype.Location = new System.Drawing.Point(344, 258);
+            this.LAtype.Location = new System.Drawing.Point(344, 311);
             this.LAtype.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LAtype.Name = "LAtype";
             this.LAtype.PasswordChar = '\0';
@@ -233,7 +233,7 @@
             this.LAempName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LAempName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LAempName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LAempName.Location = new System.Drawing.Point(889, 187);
+            this.LAempName.Location = new System.Drawing.Point(889, 240);
             this.LAempName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LAempName.Name = "LAempName";
             this.LAempName.PasswordChar = '\0';
@@ -254,7 +254,7 @@
             this.LAempId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LAempId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LAempId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LAempId.Location = new System.Drawing.Point(344, 178);
+            this.LAempId.Location = new System.Drawing.Point(344, 231);
             this.LAempId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LAempId.Name = "LAempId";
             this.LAempId.PasswordChar = '\0';
@@ -275,7 +275,7 @@
             this.LAId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LAId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LAId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LAId.Location = new System.Drawing.Point(344, 87);
+            this.LAId.Location = new System.Drawing.Point(344, 140);
             this.LAId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LAId.Name = "LAId";
             this.LAId.PasswordChar = '\0';
@@ -288,7 +288,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(169, 178);
+            this.label3.Location = new System.Drawing.Point(169, 231);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(159, 29);
             this.label3.TabIndex = 37;
@@ -298,7 +298,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(169, 96);
+            this.label2.Location = new System.Drawing.Point(169, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 29);
             this.label2.TabIndex = 36;
@@ -308,7 +308,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(510, 24);
+            this.label9.Location = new System.Drawing.Point(499, 38);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(226, 32);
             this.label9.TabIndex = 35;
@@ -319,7 +319,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1312, 769);
+            this.ClientSize = new System.Drawing.Size(1312, 850);
             this.Controls.Add(this.LAclearBtn);
             this.Controls.Add(this.LAStatus);
             this.Controls.Add(this.LAsaveBtn);
