@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LAcancelBtn = new Guna.UI2.WinForms.Guna2Button();
             this.LAclearBtn = new Guna.UI2.WinForms.Guna2Button();
             this.LAStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.LAsaveBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -49,23 +48,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // LAcancelBtn
-            // 
-            this.LAcancelBtn.BorderRadius = 10;
-            this.LAcancelBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.LAcancelBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.LAcancelBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.LAcancelBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LAcancelBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LAcancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LAcancelBtn.ForeColor = System.Drawing.Color.White;
-            this.LAcancelBtn.Location = new System.Drawing.Point(869, 508);
-            this.LAcancelBtn.Name = "LAcancelBtn";
-            this.LAcancelBtn.Size = new System.Drawing.Size(141, 45);
-            this.LAcancelBtn.TabIndex = 53;
-            this.LAcancelBtn.Text = "Cancel";
-            this.LAcancelBtn.Click += new System.EventHandler(this.LAcancelBtn_Click);
-            // 
             // LAclearBtn
             // 
             this.LAclearBtn.BorderRadius = 10;
@@ -73,10 +55,10 @@
             this.LAclearBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.LAclearBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.LAclearBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LAclearBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LAclearBtn.FillColor = System.Drawing.Color.Red;
             this.LAclearBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LAclearBtn.ForeColor = System.Drawing.Color.White;
-            this.LAclearBtn.Location = new System.Drawing.Point(613, 508);
+            this.LAclearBtn.Location = new System.Drawing.Point(917, 693);
             this.LAclearBtn.Name = "LAclearBtn";
             this.LAclearBtn.Size = new System.Drawing.Size(141, 45);
             this.LAclearBtn.TabIndex = 52;
@@ -109,10 +91,10 @@
             this.LAsaveBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.LAsaveBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.LAsaveBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LAsaveBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LAsaveBtn.FillColor = System.Drawing.Color.Red;
             this.LAsaveBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LAsaveBtn.ForeColor = System.Drawing.Color.White;
-            this.LAsaveBtn.Location = new System.Drawing.Point(354, 508);
+            this.LAsaveBtn.Location = new System.Drawing.Point(1088, 693);
             this.LAsaveBtn.Name = "LAsaveBtn";
             this.LAsaveBtn.Size = new System.Drawing.Size(141, 45);
             this.LAsaveBtn.TabIndex = 50;
@@ -123,7 +105,7 @@
             // 
             this.LAend.BorderRadius = 10;
             this.LAend.Checked = true;
-            this.LAend.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LAend.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LAend.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LAend.ForeColor = System.Drawing.Color.White;
             this.LAend.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -139,7 +121,7 @@
             // 
             this.LAstart.BorderRadius = 10;
             this.LAstart.Checked = true;
-            this.LAstart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LAstart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LAstart.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LAstart.ForeColor = System.Drawing.Color.White;
             this.LAstart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -188,7 +170,7 @@
             this.LAenterBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.LAenterBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.LAenterBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LAenterBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LAenterBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LAenterBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LAenterBtn.ForeColor = System.Drawing.Color.White;
             this.LAenterBtn.Location = new System.Drawing.Point(691, 80);
@@ -338,7 +320,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1312, 769);
-            this.Controls.Add(this.LAcancelBtn);
             this.Controls.Add(this.LAclearBtn);
             this.Controls.Add(this.LAStatus);
             this.Controls.Add(this.LAsaveBtn);
@@ -366,8 +347,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button LAcancelBtn;
         private Guna.UI2.WinForms.Guna2Button LAclearBtn;
         private Guna.UI2.WinForms.Guna2ComboBox LAStatus;
         private Guna.UI2.WinForms.Guna2Button LAsaveBtn;

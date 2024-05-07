@@ -27,13 +27,6 @@ namespace pulzz
             InitializeComponent();
         }
 
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-             Shifts form2 = new Shifts ();
-            form2.Show();
-            this.Hide();
-        }
-
         private void Dashboard_Load(object sender, EventArgs e)
         {
             BindData();
@@ -52,33 +45,36 @@ namespace pulzz
             }
         }
 
+        Menu fr = new Menu();
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+            fr.container(new Shifts());
+            fr.UpdateContainerUI();
+        }
+
         private void guna2Panel3_Paint(object sender, PaintEventArgs e)
         {
-            Profile form2 = new Profile();
-            form2.Show();
-            this.Hide();
+            fr.container(new Profile());
+            fr.UpdateContainerUI();
         }
 
         private void guna2Panel10_Paint(object sender, PaintEventArgs e)
         {
-            Attendance form2 = new Attendance();
-            form2.Show();
-            this.Hide();
+            fr.container(new Attendance());
+            fr.UpdateContainerUI();
         }
 
         private void guna2Panel11_Paint(object sender, PaintEventArgs e)
         {
-            Leaves form2 = new Leaves();
-            form2.Show();
-            this.Hide();
-
+            fr.container(new Leaves());
+            fr.UpdateContainerUI();
         }
 
         private void guna2Panel12_Paint(object sender, PaintEventArgs e)
         {
-           Payrolls form2 = new Payrolls();
-            form2.Show();
-            this.Hide();
+            fr.container(new Payrolls());
+            fr.UpdateContainerUI();
         }
     }
 }

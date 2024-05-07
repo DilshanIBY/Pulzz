@@ -28,7 +28,7 @@ namespace pulzz
             UpdateContainerUI();
         }
 
-        private void container(object _form)
+        public void container(object _form)
         {
 
             if (guna2Panel_container.Controls.Count > 0) guna2Panel_container.Controls.Clear();
@@ -89,7 +89,7 @@ namespace pulzz
 
         }
 
-        private void guna2Button11_CheckedChanged_1(object sender, EventArgs e)
+        public void guna2Button11_CheckedChanged_1(object sender, EventArgs e)
         {
             moveImageBox(sender);
         }

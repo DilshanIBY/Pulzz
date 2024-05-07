@@ -31,7 +31,6 @@
             this.LempName = new Guna.UI2.WinForms.Guna2TextBox();
             this.LempId = new Guna.UI2.WinForms.Guna2TextBox();
             this.LformId = new Guna.UI2.WinForms.Guna2TextBox();
-            this.LcancelBtn = new Guna.UI2.WinForms.Guna2Button();
             this.LclearBtn = new Guna.UI2.WinForms.Guna2Button();
             this.LapplyBtn = new Guna.UI2.WinForms.Guna2Button();
             this.Lend = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -114,23 +113,6 @@
             this.LformId.TabIndex = 32;
             this.LformId.TextChanged += new System.EventHandler(this.LformId_TextChanged);
             // 
-            // LcancelBtn
-            // 
-            this.LcancelBtn.BorderRadius = 10;
-            this.LcancelBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.LcancelBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.LcancelBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.LcancelBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LcancelBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.LcancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.LcancelBtn.ForeColor = System.Drawing.Color.White;
-            this.LcancelBtn.Location = new System.Drawing.Point(803, 523);
-            this.LcancelBtn.Name = "LcancelBtn";
-            this.LcancelBtn.Size = new System.Drawing.Size(141, 45);
-            this.LcancelBtn.TabIndex = 31;
-            this.LcancelBtn.Text = "Cancel";
-            this.LcancelBtn.Click += new System.EventHandler(this.LcancelBtn_Click);
-            // 
             // LclearBtn
             // 
             this.LclearBtn.BorderRadius = 10;
@@ -138,10 +120,10 @@
             this.LclearBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.LclearBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.LclearBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LclearBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.LclearBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(68)))), ((int)(((byte)(234)))));
             this.LclearBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LclearBtn.ForeColor = System.Drawing.Color.White;
-            this.LclearBtn.Location = new System.Drawing.Point(519, 523);
+            this.LclearBtn.Location = new System.Drawing.Point(918, 642);
             this.LclearBtn.Name = "LclearBtn";
             this.LclearBtn.Size = new System.Drawing.Size(141, 45);
             this.LclearBtn.TabIndex = 30;
@@ -155,10 +137,10 @@
             this.LapplyBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.LapplyBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.LapplyBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LapplyBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.LapplyBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(68)))), ((int)(((byte)(234)))));
             this.LapplyBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.LapplyBtn.ForeColor = System.Drawing.Color.White;
-            this.LapplyBtn.Location = new System.Drawing.Point(260, 523);
+            this.LapplyBtn.Location = new System.Drawing.Point(1088, 642);
             this.LapplyBtn.Name = "LapplyBtn";
             this.LapplyBtn.Size = new System.Drawing.Size(141, 45);
             this.LapplyBtn.TabIndex = 29;
@@ -370,7 +352,6 @@
             this.Controls.Add(this.LempName);
             this.Controls.Add(this.LempId);
             this.Controls.Add(this.LformId);
-            this.Controls.Add(this.LcancelBtn);
             this.Controls.Add(this.LclearBtn);
             this.Controls.Add(this.LapplyBtn);
             this.Controls.Add(this.Lend);
@@ -395,7 +376,6 @@
         private Guna.UI2.WinForms.Guna2TextBox LempName;
         private Guna.UI2.WinForms.Guna2TextBox LempId;
         private Guna.UI2.WinForms.Guna2TextBox LformId;
-        private Guna.UI2.WinForms.Guna2Button LcancelBtn;
         private Guna.UI2.WinForms.Guna2Button LclearBtn;
         private Guna.UI2.WinForms.Guna2Button LapplyBtn;
         private Guna.UI2.WinForms.Guna2DateTimePicker Lend;

@@ -97,7 +97,6 @@ namespace pulzz.Backend
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"C:\Users\SADINI\Desktop\C# & SAD Project\Admin Dashboard 1\Admin Dashboard 1\Database1.mdf");
             SqlDataAdapter da = new SqlDataAdapter();
             DataTable dt = new DataTable();
         }
