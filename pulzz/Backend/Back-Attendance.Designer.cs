@@ -58,6 +58,7 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(436, 40);
             this.dateTimePicker1.TabIndex = 178;
             this.dateTimePicker1.Visible = false;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
             // 
             // label5
             // 

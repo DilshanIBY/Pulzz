@@ -109,7 +109,7 @@ namespace pulzz.Backend
             {
                 conn.Close();
                 txt1.Text = "";
-                Application.Restart();
+                
             }
 
         }
@@ -369,7 +369,7 @@ namespace pulzz.Backend
             {
                 conn.Close();
                 txt1.Text = "";
-                Application.Restart();
+                //Application.Restart();
             }
         }
 
@@ -399,7 +399,7 @@ namespace pulzz.Backend
             finally
             {
                 txt1.Text = "";
-                Application.Restart();
+                //Application.Restart();
             }
         }
 
@@ -448,8 +448,13 @@ namespace pulzz.Backend
             {
                 conn.Close();
                 txt1.Text = "";
-                Application.Restart();
+                //Application.Restart();
             }
+        }
+
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
