@@ -19,7 +19,7 @@ namespace Pulzz
         {
             InitializeComponent();
             InitializeChat();
-            _openAI = new OpenAIIntegration("sk-proj-UEJuGqCH5Rsd8a6fVTMwT3BlbkFJda6QSwL9UG77RktdZbsT"); // The OpenAI API key
+            _openAI = new OpenAIIntegration("sk-proj-FqbcHrIKsrCmkguCldgOT3BlbkFJwJ2QF35NvOpFDNWudEW0"); // The OpenAI API key
         }
 
         private void InitializeChat()
