@@ -16,7 +16,6 @@ namespace pulzz.Frontend
 {
     public partial class Payrolls : Form
     {
-        //Data Source=DESKTOP-H7G6VPS;Initial Catalog=EmpSalary;Integrated Security=True
         SqlConnection con = new SqlConnection(new DatabaseReader().getConnStr());
         SqlCommand cmd;
         SqlDataAdapter adapt;
@@ -146,6 +145,150 @@ namespace pulzz.Frontend
         // Update Record
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        // Delete Record
+        private void btnDelate_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
+        // Search Record
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("select * from Salary where  EmployeeID like '" + txtEmpId.Text + "%' OR EmployeeName like '" + txtEmpName.Text + "%'", con);
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+
+        }
+
+        private void Payrolls_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            textBox12.Text = "";
+            DisplayData();
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("select * from Salary where  EmployeeID like '" + textBox12.Text + "%'", con);
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+
+        }
+
+        private void EnterBtn_Click(object sender, EventArgs e)
+        {
+            if (txtEmpId.Text != "" && txtEmpName.Text != "")
+            {
+                try
+                {
+                    con.Open();
+                    string insert_query = "insert into Salary (EmployeeID,EmployeeName,Position,PayDates,BasicSalary,ETFAmount,EPFAmount,Allowance,GrossSalary,NetSalary,AttendanceDates,OverTime,NetPay) " +
+                        "values (@EmployeeID ,@EmployeeName,@Position,@PayDates,@BasicSalary,@ETFAmount,@EPFAmount,@Allowance,@GrossSalary,@NetSalary,@AttendanceDates,@OverTime,@NetPay )";
+                    //string insert_query = "insert into Salary (EmployeeID) values (@ID)";
+                    cmd = new SqlCommand(insert_query, con);
+                    cmd.Parameters.AddWithValue("@EmployeeID", int.Parse(txtEmpId.Text));
+                    cmd.Parameters.AddWithValue("@EmployeeName", txtEmpName.Text);
+                    cmd.Parameters.AddWithValue("@Position", cmbPosition.Text);
+                    cmd.Parameters.AddWithValue("@PayDates", dateTimePicker1.Text);
+                    cmd.Parameters.AddWithValue("@BasicSalary", Double.Parse(txtBasic.Text));
+                    cmd.Parameters.AddWithValue("@ETFAmount", Double.Parse(textBox2.Text));
+                    cmd.Parameters.AddWithValue("@EPFAmount", Double.Parse(textBox1.Text));
+                    cmd.Parameters.AddWithValue("@Allowance", Double.Parse(txtAllowance.Text));
+                    cmd.Parameters.AddWithValue("@GrossSalary", Double.Parse(txtGrossSalary.Text));
+                    cmd.Parameters.AddWithValue("@NetSalary", Double.Parse(txtNetSalary.Text));
+                    cmd.Parameters.AddWithValue("@AttendanceDates", int.Parse(txtAttendance.Text));
+                    cmd.Parameters.AddWithValue("@OverTime", int.Parse(txtOver.Text));
+                    cmd.Parameters.AddWithValue("@NetPay", Double.Parse(txtNet.Text));
+
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+
+                    MessageBox.Show("Record Inserted Successfully");
+                    //refresh the data table 
+                    DisplayData(); //02
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERORR:" + ex.ToString());
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Provide Details!");
+            }
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (txtEmpId.Text != "" && txtEmpName.Text != "")
+            {
+                try
+                {
+                    con.Open();
+                    string delete_query = "delete Salary where EmployeeID=@EmployeeID AND EmployeeName=@EmployeeName";
+                    cmd = new SqlCommand(delete_query, con);
+                    cmd.Parameters.AddWithValue("@EmployeeID", int.Parse(txtEmpId.Text));
+                    cmd.Parameters.AddWithValue("@EmployeeName", txtEmpName.Text);
+                    //cmd.Parameters.AddWithValue("@Position", cmbPosition.Text);
+                    //cmd.Parameters.AddWithValue("@PayDates", dateTimePicker1.Text);
+                    //cmd.Parameters.AddWithValue("@BasicSalary", Double.Parse(txtBasic.Text));
+                    //cmd.Parameters.AddWithValue("@AttendanceDates", int.Parse(txtAttendance.Text));
+                    //cmd.Parameters.AddWithValue("@OverTime", int.Parse(txtOver.Text));
+                    //cmd.Parameters.AddWithValue("@Total", int.Parse(txtTotal.Text));
+                    //cmd.Parameters.AddWithValue("@Tax", Double.Parse(txtTax.Text));
+                    //cmd.Parameters.AddWithValue("@ETF", Double.Parse(txtETF.Text));
+                    //cmd.Parameters.AddWithValue("@NetPay", Double.Parse(txtNet.Text));
+
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    MessageBox.Show("Record Delete Successfully");
+                    //refresh the data table
+                    AnotherFunction();  //01
+                    DisplayData(); //02
+
+                    ClearData();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERORR:" + ex.ToString());
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Provide Details!");
+            }
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
             if (txtEmpId.Text != "" && txtEmpName.Text != "")
             {
                 try
@@ -192,92 +335,9 @@ namespace pulzz.Frontend
             }
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void ClearBtn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        
-
-        // Delete Record
-        private void btnDelate_Click(object sender, EventArgs e)
-        {
-            if (txtEmpId.Text != "" && txtEmpName.Text != "")
-            {
-                try
-                {
-                    con.Open();
-                    string delete_query = "delete Salary where EmployeeID=@EmployeeID AND EmployeeName=@EmployeeName";
-                    cmd = new SqlCommand(delete_query, con);
-                    cmd.Parameters.AddWithValue("@EmployeeID", int.Parse(txtEmpId.Text));
-                    cmd.Parameters.AddWithValue("@EmployeeName", txtEmpName.Text);
-                    //cmd.Parameters.AddWithValue("@Position", cmbPosition.Text);
-                    //cmd.Parameters.AddWithValue("@PayDates", dateTimePicker1.Text);
-                    //cmd.Parameters.AddWithValue("@BasicSalary", Double.Parse(txtBasic.Text));
-                    //cmd.Parameters.AddWithValue("@AttendanceDates", int.Parse(txtAttendance.Text));
-                    //cmd.Parameters.AddWithValue("@OverTime", int.Parse(txtOver.Text));
-                    //cmd.Parameters.AddWithValue("@Total", int.Parse(txtTotal.Text));
-                    //cmd.Parameters.AddWithValue("@Tax", Double.Parse(txtTax.Text));
-                    //cmd.Parameters.AddWithValue("@ETF", Double.Parse(txtETF.Text));
-                    //cmd.Parameters.AddWithValue("@NetPay", Double.Parse(txtNet.Text));
-
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-
-                    MessageBox.Show("Record Delete Successfully");
-                    //refresh the data table
-                    AnotherFunction();  //01
-                    DisplayData(); //02
-
-                    ClearData();
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("ERORR:" + ex.ToString());
-
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please Provide Details!");
-            }
-
-
-        }
-        // Search Record
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter("select * from Salary where  EmployeeID like '" + txtEmpId.Text + "%' OR EmployeeName like '" + txtEmpName.Text + "%'", con);
-            adapt.Fill(dt);
-            dataGridView1.DataSource = dt;
-            con.Close();
-
-        }
-
-        private void Payrolls_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            textBox12.Text = "";
-            DisplayData();
-        }
-
-        private void textBox12_TextChanged(object sender, EventArgs e)
-        {
-            con.Open();
-            DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter("select * from Salary where  EmployeeID like '" + textBox12.Text + "%'", con);
-            adapt.Fill(dt);
-            dataGridView1.DataSource = dt;
-            con.Close();
-
+            ClearData();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
