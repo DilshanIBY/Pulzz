@@ -37,12 +37,12 @@ namespace pulzz
             SqlConnection con = new SqlConnection(new DatabaseReader().getConnStr());
             String email, password;
 
-            email = txtLogEmail.Text;
+            email = txtemail.Text;
             password = txtpass.Text;
 
             try
             {
-                string querry = "SELECT * FROM Employees WHERE Email = '" + txtLogEmail.Text + "' AND Password ='" + txtpassword.Text + "'";
+                string querry = "SELECT * FROM Employee_details WHERE Email = '" + txtLogEmail.Text + "' AND Password ='" + txtpassword.Text + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(querry, con);
 
                 DataTable dtable = new DataTable();
@@ -133,18 +133,19 @@ namespace pulzz
             }
 
             SqlConnection con = new SqlConnection(new DatabaseReader().getConnStr());
-            SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Employees]
+            SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Employee_details]
            ([EmployeeID]
-           ,[FirstName]
+           ,[EmployeeName]
            ,[DateOfBirth]
            ,[Gender]
            ,[Address]
-           ,[Position]
-           ,[Phone]
+           ,[Post]
+           ,[ContactNo]
            ,[Email]
-           ,[Password])
+           ,[Password]
+           ,[ConfirmPassword])
      VALUES
-           ('" + txtid.Text + "','" + txtname.Text + "','" + txtdob.Text + "', '" + combogender.SelectedItem.ToString() + "','" + txtaddress.Text + "','" + combopost.SelectedItem.ToString() + "','" + txtcontact.Text + "','" + txtemail.Text + "',','" + txtpass.Text + "',')", con);
+           ('" + txtid.Text + "','" + txtname.Text + "','" + txtdob.Text + "', '" + combogender.SelectedItem.ToString() + "','" + txtaddress.Text + "','" + combopost.SelectedItem.ToString() + "','" + txtcontact.Text + "','" + txtemail.Text + "',','" + txtpass.Text + "','" + txtcompass.Text + "')", con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
